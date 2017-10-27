@@ -1,0 +1,1 @@
+REWRITE_SYSTEM "http://varsle-vedtak-nav/" "maven:no.nav.samordning.wsdl:varsle-vedtak-nav-wsdl:jar::!/"

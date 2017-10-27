@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V0_5" targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_5">
+  <xsd:complexType name="VarsleManglendeRefusjonskravReq">
+    <xsd:sequence>
+      <xsd:element minOccurs="1" name="tpnr">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:length value="4"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="1" name="fnr">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:length value="11"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="1" name="samordningsmeldingId">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="10"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element minOccurs="1" name="svarfristDato" type="xsd:date"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

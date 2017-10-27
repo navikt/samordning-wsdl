@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SAMvarsleVedtakSamordning" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:bind="http://nav-cons-sto-sam-samordning/no/nav/inf/Binding">
+    <wsdl:types>
+        <xsd:schema xmlns:Q1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="../lib/sto/sam/fault/FaultStoPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleVedtakSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleTPSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="../lib/sto/sam/fault/FaultStoGenerisk.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoTPNummerIkkeGyldig.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoTSSEksternIdIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoNAVHarIkkeWSGrensesnittMotTPOrdningen.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleManglendeRefusjonskravRequest.xsd"/>
+            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleEndringPersonaliaRequest.xsd"/>
+            <xsd:element name="varsleVedtakSamordning">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleVedtakSamordningRequest" nillable="true" type="bons1:ASBOStoVarsleVedtakSamordningRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakSamordningResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleVedtakSamordningResponse" nillable="true" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakSamordning_faultStoGenerisk" type="bons2:FaultStoGenerisk"/>
+            <xsd:element name="varsleVedtakSamordning_faultStoPersonIkkeFunnet" type="bons2:FaultStoPersonIkkeFunnet"/>
+            <xsd:element name="varsleVedtakSamordning_faultStoTSSEksternIdIkkeFunnet" type="Q1:FaultStoTSSEksternIdIkkeFunnet"/>
+            <xsd:element name="varsleVedtakSamordning_faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" type="Q1:FaultStoNAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="varsleVedtakSamordningRequestMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning" name="varsleVedtakSamordningParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordningResponseMsg">
+        <wsdl:part element="tns:varsleVedtakSamordningResponse" name="varsleVedtakSamordningResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_faultStoGeneriskMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_faultStoGenerisk" name="faultStoGenerisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_faultStoPersonIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_faultStoPersonIkkeFunnet" name="faultStoPersonIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_faultStoTSSEksternIdIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_faultStoTSSEksternIdIkkeFunnet" name="faultStoTSSEksternIdIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_faultStoNAVHarIkkeWSGrensesnittMotTPOrdningenMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+    </wsdl:message>
+    <wsdl:portType name="SAMvarsleVedtakSamordning">
+        <wsdl:operation name="varsleVedtakSamordning">
+            <wsdl:input message="tns:varsleVedtakSamordningRequestMsg" name="varsleVedtakSamordningRequest"/>
+            <wsdl:output message="tns:varsleVedtakSamordningResponseMsg" name="varsleVedtakSamordningResponse"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_faultStoGeneriskMsg" name="faultStoGenerisk"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_faultStoPersonIkkeFunnetMsg" name="faultStoPersonIkkeFunnet"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_faultStoTSSEksternIdIkkeFunnetMsg" name="faultStoTSSEksternIdIkkeFunnet"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_faultStoNAVHarIkkeWSGrensesnittMotTPOrdningenMsg" name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="SAMvarsleVedtakSamordningHttpBinding" type="tns:SAMvarsleVedtakSamordning">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="varsleVedtakSamordning">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="varsleVedtakSamordningRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="varsleVedtakSamordningResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="faultStoTSSEksternIdIkkeFunnet">
+                <soap:fault name="faultStoTSSEksternIdIkkeFunnet" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="faultStoPersonIkkeFunnet">
+                <soap:fault name="faultStoPersonIkkeFunnet" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="faultStoGenerisk">
+                <soap:fault name="faultStoGenerisk" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen">
+                <soap:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="SAMvarsleVedtakSamordningHttpService">
+        <wsdl:port name="SAMvarsleVedtakSamordningHttpPort" binding="bind:SAMvarsleVedtakSamordningHttpBinding">
+            <soap:address location="http://localhost:8080/ws/varsleVedtakSamordning"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
