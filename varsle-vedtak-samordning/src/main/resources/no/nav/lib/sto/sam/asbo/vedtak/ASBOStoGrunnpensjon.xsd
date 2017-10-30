@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak">
+<xsd:schema xmlns:bons0="http://nav.no/samordning/lib/sto/sam/asbo/vedtak" xmlns:bons1="http://nav.no/samordning/lib/sto/sam/asbo" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/samordning/lib/sto/sam/asbo/vedtak">
     <xsd:include schemaLocation="ASBOStoYtelseskomponent.xsd"/>
     <xsd:complexType name="ASBOStoGrunnpensjon">
     <xsd:complexContent>

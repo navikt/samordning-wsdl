@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak"
-	xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak">
+	targetNamespace="http://nav.no/samordning/lib/sto/sam/asbo/vedtak"
+	xmlns:bons0="http://nav.no/samordning/lib/sto/sam/asbo/vedtak">
 	<xsd:include schemaLocation="ASBOStoSluttpoengtall.xsd"></xsd:include>
 	<xsd:complexType name="ASBOStoBeregning2011">
 		<xsd:sequence>

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
-	xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo"
+	xmlns:bons1="http://nav.no/samordning/lib/sto/sam/asbo"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak">	<xsd:import schemaLocation="../ASBOStoEndringsInfo.xsd"
-		namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo">
+	targetNamespace="http://nav.no/samordning/lib/sto/sam/asbo/vedtak">
+
+	<xsd:import schemaLocation="../ASBOStoEndringsInfo.xsd"
+		namespace="http://nav.no/samordning/lib/sto/sam/asbo">
 	</xsd:import>
 	<xsd:complexType name="ASBOStoVilkarsvedtak">
 		<xsd:sequence>
@@ -18,7 +20,9 @@
 			<xsd:element minOccurs="0"
 				name="vilkarsvedtakResultatSpesKode" type="xsd:string" />
 			<xsd:element minOccurs="0" name="kravlinjeKode"
-				type="xsd:string" />			<xsd:element minOccurs="0" name="innstillingKode"
+				type="xsd:string" />
+
+			<xsd:element minOccurs="0" name="innstillingKode"
 				type="xsd:string" />
 			<xsd:element minOccurs="0" name="virkningFom"
 				type="xsd:date" />

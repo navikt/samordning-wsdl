@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SAMvarsleVedtakSamordning" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:bind="http://nav-cons-sto-sam-samordning/no/nav/inf/Binding">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:bons1="http://nav.no/samordning/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav.no/samordning/lib/sto/sam/fault" xmlns:tns="http://nav.no/samordning/varslevedtaksamordning/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SAMvarsleVedtakSamordning" targetNamespace="http://nav.no/samordning/varslevedtaksamordning/inf" xmlns:bind="http://nav.no/samordning/varslevedtaksamordning/inf/Binding">
     <wsdl:types>
-        <xsd:schema xmlns:Q1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="../lib/sto/sam/fault/FaultStoPersonIkkeFunnet.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleVedtakSamordningRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleTPSamordningRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="../lib/sto/sam/fault/FaultStoGenerisk.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoTPNummerIkkeGyldig.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoTSSEksternIdIkkeFunnet.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoNAVHarIkkeWSGrensesnittMotTPOrdningen.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleManglendeRefusjonskravRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleEndringPersonaliaRequest.xsd"/>
+        <xsd:schema xmlns:Q1="http://nav.no/samordning/lib/sto/sam/fault/samordning" targetNamespace="http://nav.no/samordning/varslevedtaksamordning/inf" xmlns:bons1="http://nav.no/samordning/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav.no/samordning/lib/sto/sam/fault" xmlns:tns="http://nav.no/samordning/varslevedtaksamordning/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/fault" schemaLocation="../lib/sto/sam/fault/FaultStoPersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleVedtakSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleTPSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/fault" schemaLocation="../lib/sto/sam/fault/FaultStoGenerisk.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoTPNummerIkkeGyldig.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoTSSEksternIdIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/fault/samordning" schemaLocation="../lib/sto/sam/fault/samordning/FaultStoNAVHarIkkeWSGrensesnittMotTPOrdningen.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleManglendeRefusjonskravRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/lib/sto/sam/asbo/samordning" schemaLocation="../lib/sto/sam/asbo/samordning/ASBOStoVarsleEndringPersonaliaRequest.xsd"/>
             <xsd:element name="varsleVedtakSamordning">
                 <xsd:complexType>
                     <xsd:sequence>
