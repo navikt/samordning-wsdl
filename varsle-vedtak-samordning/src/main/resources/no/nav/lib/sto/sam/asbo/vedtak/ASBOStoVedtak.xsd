@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	xmlns:bons2="http://nav.no/samordning/lib/sto/sam/asbo/vedtak"
-	xmlns:bons3="http://nav.no/samordning/lib/sto/sam/asbo"
-	targetNamespace="http://nav.no/samordning/lib/sto/sam/asbo/vedtak">
+	xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak"
+	xmlns:bons3="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo"
+	targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak">
 
 	<xsd:include
 		schemaLocation="ASBOStoBeregningsResultatUforetrygd.xsd">
@@ -10,7 +10,7 @@
 	<xsd:include schemaLocation="ASBOStoBeregning2011.xsd"></xsd:include>
 	<xsd:include schemaLocation="ASBOStoAFPEO.xsd" />
 	<xsd:import
-		namespace="http://nav.no/samordning/lib/sto/sam/asbo"
+		namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo"
 		schemaLocation="../ASBOStoEndringsInfo.xsd">
 	</xsd:import>
 	<xsd:include schemaLocation="ASBOStoKravhode.xsd" />

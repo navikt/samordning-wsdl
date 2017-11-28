@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
-	targetNamespace="http://nav.no/samordning/lib/sto/sam/asbo/vedtak"
+	targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/vedtak"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<xsd:complexType name="ASBOStoBeregningsResultatUforetrygd">
 		<xsd:sequence>
