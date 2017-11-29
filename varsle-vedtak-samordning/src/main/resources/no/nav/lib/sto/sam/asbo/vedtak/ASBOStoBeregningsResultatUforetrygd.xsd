@@ -77,7 +77,13 @@
 				type="xsd:int">
 			</xsd:element>
 			<xsd:element minOccurs="0"
-				name="inntektBruktIInntektsavkorting" type="xsd:int">
+						 name="inntektBruktIInntektsavkorting" type="xsd:int">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+						 name="ufoeretidspunkt" type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+						 name="beloepsgrense" type="xsd:int">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
