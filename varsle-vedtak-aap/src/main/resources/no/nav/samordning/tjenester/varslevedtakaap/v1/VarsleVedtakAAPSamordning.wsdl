@@ -11,13 +11,6 @@
                     </xsd:sequence>
                 </xsd:complexType>
             </xsd:element>
-            <xsd:element name="varsleVedtakAAPSamordningResponse">
-                <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name="varsleVedtakAAPSamordningResponse" type="xsd:string"/>
-                    </xsd:sequence>
-                </xsd:complexType>
-            </xsd:element>
             <xsd:element name="varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnet" type="feil:VedtakIdIkkeFunnet"/>
             <xsd:element name="varsleVedtakAAPSamordning_feil_tpnrIkkeFunnet" type="feil:TPNRIkkeFunnet"/>
             <xsd:element name="varsleVedtakAAPSamordning_feil_feilISending" type="feil:FeilISending"/>
@@ -27,9 +20,7 @@
     <wsdl:message name="varsleVedtakAAPSamordningRequestMsg">
         <wsdl:part element="tns:varsleVedtakAAPSamordning" name="varsleVedtakAAPSamordningParameters"/>
     </wsdl:message>
-    <wsdl:message name="varsleVedtakAAPSamordningResponseMsg">
-        <wsdl:part element="tns:varsleVedtakAAPSamordningResponse" name="varsleVedtakAAPSamordningResult"/>
-    </wsdl:message>
+    <wsdl:message name="varsleVedtakAAPSamordningResponseMsg"/>
     <wsdl:message name="varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnetMsg">
         <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnet" name="varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnet"/>
     </wsdl:message>
