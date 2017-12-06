@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/samordning/tjenester/varslevedtakaap/v1/meldinger">
+    <xsd:complexType name="VarsleVedtakAAPSamordningRequest">
+        <xsd:sequence>
+            <xsd:element name="fnr" type="xsd:string"/>
+            <xsd:element name="vedtakID" type="xsd:string"/>
+            <xsd:element name="tpnr" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

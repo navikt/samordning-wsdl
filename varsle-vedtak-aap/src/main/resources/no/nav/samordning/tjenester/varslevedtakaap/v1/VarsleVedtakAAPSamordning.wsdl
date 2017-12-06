@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:meldinger="http://nav.no/samordning/tjenester/varslevedtakaap/v1/meldinger" xmlns:feil="http://nav.no/samordning/tjenester/varslevedtakaap/v1/feil" xmlns:tns="http://nav.no/samordning/tjenester/varslevedtakaap/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="VarsleVedtakAAPSamordning" targetNamespace="http://nav.no/samordning/tjenester/varslevedtakaap/v1">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://nav.no/samordning/tjenester/varslevedtakaap/v1" xmlns:tns="http://nav.no/samordning/tjenester/varslevedtakaap/v1" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslevedtakaap/v1/feil" schemaLocation="feil/feil.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslevedtakaap/v1/meldinger" schemaLocation="meldinger/meldinger.xsd"/>
+            <xsd:element name="varsleVedtakAAPSamordning">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleVedtakAAPSamordningRequest" type="meldinger:VarsleVedtakAAPSamordningRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakAAPSamordningResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleVedtakAAPSamordningResponse" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnet" type="feil:VedtakIdIkkeFunnet"/>
+            <xsd:element name="varsleVedtakAAPSamordning_feil_tpnrIkkeFunnet" type="feil:TPNRIkkeFunnet"/>
+            <xsd:element name="varsleVedtakAAPSamordning_feil_feilISending" type="feil:FeilISending"/>
+            <xsd:element name="varsleVedtakAAPSamordning_feil_hentVedtakFeiler" type="feil:HentVedtakFeiler"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="varsleVedtakAAPSamordningRequestMsg">
+        <wsdl:part element="tns:varsleVedtakAAPSamordning" name="varsleVedtakAAPSamordningParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakAAPSamordningResponseMsg">
+        <wsdl:part element="tns:varsleVedtakAAPSamordningResponse" name="varsleVedtakAAPSamordningResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnet" name="varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakAAPSamordning_feil_tpnrIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_tpnrIkkeFunnet" name="varsleVedtakAAPSamordning_feil_tpnrIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakAAPSamordning_feil_feilISendingMsg">
+        <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_feilISending" name="varsleVedtakAAPSamordning_feil_feilISending"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakAAPSamordning_feil_hentVedtakFeilerMsg">
+        <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_hentVedtakFeiler" name="varsleVedtakAAPSamordning_feil_hentVedtakFeiler"/>
+    </wsdl:message>
+    <wsdl:portType name="VarsleVedtakAAPSamordning">
+        <wsdl:operation name="varsleVedtakAAPSamordning">
+            <wsdl:input message="tns:varsleVedtakAAPSamordningRequestMsg" name="varsleVedtakAAPSamordningRequest"/>
+            <wsdl:output message="tns:varsleVedtakAAPSamordningResponseMsg" name="varsleVedtakAAPSamordningResponse"/>
+            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnetMsg" name="feil_vedtakIdIkkeFunnetMsg"/>
+            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_tpnrIkkeFunnetMsg" name="feil_tpnrIkkeFunne"/>
+            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_feilISendingMsg" name="feil_feilISending"/>
+            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_hentVedtakFeilerMsg" name="feil_hentVedtakFeiler"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>
