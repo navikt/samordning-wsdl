@@ -4,7 +4,7 @@
         <xsd:sequence>
             <xsd:element name="fnr" type="xsd:string"/>
             <xsd:element name="vedtakID" type="xsd:string"/>
-            <xsd:element name="tpnr" type="xsd:string"/>
+            <xsd:element name="tpnr" maxOccurs="unbounded" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
