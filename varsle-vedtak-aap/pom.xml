@@ -23,7 +23,6 @@
                         </goals>
                         <configuration>
                             <schemaDirectory>${project.basedir}/src/main/resources/no/nav/samordning/tjenester/varslevedtakaap/v1</schemaDirectory>
-                            <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
                             <strict>false</strict>
                             <schemaIncludes>
                                 <include>VarsleVedtakAAPSamordning.wsdl</include>
