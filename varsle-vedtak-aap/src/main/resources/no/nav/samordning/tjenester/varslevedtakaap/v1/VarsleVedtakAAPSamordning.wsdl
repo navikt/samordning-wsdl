@@ -15,6 +15,7 @@
             <xsd:element name="varsleVedtakAAPSamordning_feil_tpnrIkkeFunnet" type="feil:TPNRIkkeFunnet"/>
             <xsd:element name="varsleVedtakAAPSamordning_feil_feilISending" type="feil:FeilISending"/>
             <xsd:element name="varsleVedtakAAPSamordning_feil_hentVedtakFeiler" type="feil:HentVedtakFeiler"/>
+            <xsd:element name="varsleVedtakAAPSamordning_feil_sikkerhetsbegrensning" type="feil:Sikkerhetsbegrensning"/>
         </xsd:schema>
     </wsdl:types>
     <wsdl:message name="varsleVedtakAAPSamordningRequestMsg">
@@ -33,6 +34,9 @@
     <wsdl:message name="varsleVedtakAAPSamordning_feil_hentVedtakFeilerMsg">
         <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_hentVedtakFeiler" name="varsleVedtakAAPSamordning_feil_hentVedtakFeiler"/>
     </wsdl:message>
+    <wsdl:message name="varsleVedtakAAPSamordning_feil_sikkerhetsbegrensningMsg">
+        <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_sikkerhetsbegrensning" name="varsleVedtakAAPSamordning_feil_sikkerhetsbegrensning"/>
+    </wsdl:message>
     <wsdl:portType name="VarsleVedtakAAPSamordning_v1">
         <wsdl:operation name="varsleVedtakAAPSamordning">
             <wsdl:input message="tns:varsleVedtakAAPSamordningRequestMsg" name="varsleVedtakAAPSamordningRequest"/>
@@ -41,6 +45,7 @@
             <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_tpnrIkkeFunnetMsg" name="feil_tpnrIkkeFunnet"/>
             <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_feilISendingMsg" name="feil_feilISending"/>
             <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_hentVedtakFeilerMsg" name="feil_hentVedtakFeiler"/>
+            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_sikkerhetsbegrensningMsg" name="feil_sikkerhetsbegrensning"/>
         </wsdl:operation>
     </wsdl:portType>
 </wsdl:definitions>

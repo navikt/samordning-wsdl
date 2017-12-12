@@ -23,6 +23,9 @@
             <wsdl:fault name="feil_hentVedtakFeiler">
                 <soap:fault name="feil_hentVedtakFeiler" use="literal"/>
             </wsdl:fault>
+            <wsdl:fault name="feil_sikkerhetsbegrensning">
+                <soap:fault name="feil_sikkerhetsbegrensning" use="literal"/>
+            </wsdl:fault>
         </wsdl:operation>
     </wsdl:binding>
     <wsdl:service name="VarsleVedtakAAPSamordning_v1">
