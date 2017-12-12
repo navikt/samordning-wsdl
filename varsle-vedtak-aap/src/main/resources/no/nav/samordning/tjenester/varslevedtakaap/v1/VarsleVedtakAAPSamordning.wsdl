@@ -33,12 +33,12 @@
     <wsdl:message name="varsleVedtakAAPSamordning_feil_hentVedtakFeilerMsg">
         <wsdl:part element="tns:varsleVedtakAAPSamordning_feil_hentVedtakFeiler" name="varsleVedtakAAPSamordning_feil_hentVedtakFeiler"/>
     </wsdl:message>
-    <wsdl:portType name="VarsleVedtakAAPSamordning">
+    <wsdl:portType name="VarsleVedtakAAPSamordning_v1">
         <wsdl:operation name="varsleVedtakAAPSamordning">
             <wsdl:input message="tns:varsleVedtakAAPSamordningRequestMsg" name="varsleVedtakAAPSamordningRequest"/>
             <wsdl:output message="tns:varsleVedtakAAPSamordningResponseMsg" name="varsleVedtakAAPSamordningResponse"/>
-            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnetMsg" name="feil_vedtakIdIkkeFunnetMsg"/>
-            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_tpnrIkkeFunnetMsg" name="feil_tpnrIkkeFunne"/>
+            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_vedtakIdIkkeFunnetMsg" name="feil_vedtakIdIkkeFunnet"/>
+            <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_tpnrIkkeFunnetMsg" name="feil_tpnrIkkeFunnet"/>
             <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_feilISendingMsg" name="feil_feilISending"/>
             <wsdl:fault message="tns:varsleVedtakAAPSamordning_feil_hentVedtakFeilerMsg" name="feil_hentVedtakFeiler"/>
         </wsdl:operation>

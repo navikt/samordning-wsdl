@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Binding" targetNamespace="http://nav.no/samordning/tjenester/varslevedtakaap/v1/Binding" xmlns:tns="http://nav.no/samordning/tjenester/varslevedtakaap/v1/Binding" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl_spec="http://nav.no/samordning/tjenester/varslevedtakaap/v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:import namespace="http://nav.no/samordning/tjenester/varslevedtakaap/v1" location="VarsleVedtakAAPSamordning.wsdl">
+    </wsdl:import>
+    <wsdl:binding name="VarsleVedtakAAPSamordning_v1Binding" type="wsdl_spec:VarsleVedtakAAPSamordning_v1">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsaw:UsingAddressing/>
+        <wsdl:operation name="varsleVedtakAAPSamordning">
+            <soap:operation soapAction="http://nav.no/samordning/tjenester/varslevedtakaap/v1/VarsleVedtakAAPSamordning_v1/varsleVedtakAAPSamordning"/>
+            <wsdl:input>
+                <soap:body parts="wsdl_spec:varsleVedtakAAPSamordning" use="literal"/>
+            </wsdl:input>
+            <wsdl:output/>
+            <wsdl:fault name="feil_vedtakIdIkkeFunnet">
+                <soap:fault name="feil_vedtakIdIkkeFunnet" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="feil_tpnrIkkeFunnet">
+                <soap:fault name="feil_tpnrIkkeFunnet" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="feil_feilISending">
+                <soap:fault name="feil_feilISending" use="literal"/>
+            </wsdl:fault>
+            <wsdl:fault name="feil_hentVedtakFeiler">
+                <soap:fault name="feil_hentVedtakFeiler" use="literal"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="VarsleVedtakAAPSamordning_v1">
+        <wsdl:port name="varsleVedtakAAPSamordning_v1Port" binding="tns:VarsleVedtakAAPSamordning_v1Binding">
+            <soap:address location="http://localhost:8080/ws/varsleVedtakAAPSamordning_v1"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -9,7 +9,7 @@
     <artifactId>varsle-vedtak-aap-wsdl</artifactId>
     <version>1-SNAPSHOT</version>
 
-    <build>
+    <!--build>
         <plugins>
             <plugin>
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
@@ -27,6 +27,65 @@
                             <schemaIncludes>
                                 <include>VarsleVedtakAAPSamordning.wsdl</include>
                             </schemaIncludes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-codegen-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <id>generate-sources</id>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <sourceRoot>${project.basedir}/src/main/java</sourceRoot>
+                            <wsdlOptions>
+                                <wsdlOption>
+                                    <wsdl>${basedir}/src/main/resources/no/nav/samordning/tjenester/varslevedtakaap/v1/Binding.wsdl</wsdl>
+                                    <wsdlLocation>no/nav/samordning/tjenester/varslevedtakaap/v1/Binding.wsdl</wsdlLocation>
+                                </wsdlOption>
+                            </wsdlOptions>
+                        </configuration>
+                        <goals>
+                            <goal>wsdl2java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-distribution</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>assembly/schemas.xml</descriptor>
+                            </descriptors>
                         </configuration>
                     </execution>
                 </executions>
