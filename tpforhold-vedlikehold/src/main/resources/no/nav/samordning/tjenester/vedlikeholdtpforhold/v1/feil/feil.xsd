@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        targetNamespace="http://nav.no/samordning/tjenester/vedlikeholdtpforhold/v1/feil"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+    <xsd:include schemaLocation="FaultGenerisk.xsd"></xsd:include>
+    <xsd:include schemaLocation="FaultTPYtelseAlleredeRegistrert.xsd"></xsd:include>
+</xsd:schema>

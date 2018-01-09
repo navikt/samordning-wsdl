@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V0_5" targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_5">
-  <xsd:complexType name="VarsleEndringTPYtelseReq">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/samordning/tjenester/vedlikeholdtpforhold/v1/meldinger">
+  <xsd:complexType name="LagreTPYtelseReq">
     <xsd:sequence>
       <xsd:element minOccurs="1" name="tpnr">
         <xsd:simpleType>
@@ -16,22 +16,6 @@
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:element>
-      <xsd:element minOccurs="1" name="tpnrSamordner">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:string">
-            <xsd:length value="4"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:element>
-      <xsd:element minOccurs="1" name="henvendelseType">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="TILGANG"/>
-            <xsd:enumeration value="OPPHOR"/>
-            <xsd:enumeration value="SLETTING"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:element>
       <xsd:element minOccurs="1" name="tpArt">
         <xsd:simpleType>
           <xsd:restriction base="xsd:string">
@@ -44,7 +28,7 @@
         </xsd:simpleType>
       </xsd:element>
       <xsd:element minOccurs="1" name="datoFom" type="xsd:date"/>
-      <xsd:element minOccurs="0" name="datoTom" type="xsd:date"/>
+      <xsd:element minOccurs="1" name="datoFomMedlemskap" type="xsd:date"/>
     </xsd:sequence>
   </xsd:complexType>
 </xsd:schema>

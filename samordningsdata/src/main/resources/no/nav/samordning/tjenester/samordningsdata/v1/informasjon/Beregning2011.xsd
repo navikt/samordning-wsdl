@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema
-	targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_8"
-	xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V0_8"
-	xmlns:bons1="http://nav.no/elsam/tpsamordningvarsling/V0_5"
-	xmlns:bons2="http://nav.no/elsam/tpsamordningvarsling/V0_7"
+	targetNamespace="http://nav.no/samordning/tjenester/samordningsdata/v1/informasjon"
+	xmlns:v1="http://nav.no/samordning/tjenester/samordningsdata/v1/informasjon"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:import
-		schemaLocation="../../V0_7/asbo/Beregning2011Utvidelse1.xsd"
-		namespace="http://nav.no/elsam/tpsamordningvarsling/V0_7">
-	</xsd:import>
-	<xsd:import
-		namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5"
-		schemaLocation="../../V0_5/asbo/Sluttpoengtall.xsd" />
+	<xsd:include schemaLocation="Sluttpoengtall.xsd"></xsd:include>
+	<xsd:include schemaLocation="Beregning2011Utvidelse1.xsd"></xsd:include>
+
 	<xsd:complexType name="Beregning2011">
 		<xsd:sequence>
 			<xsd:element minOccurs="0" name="virkningFom"
@@ -61,10 +55,10 @@
 			<xsd:element minOccurs="0" name="mndPensjonstillegg"
 				type="xsd:int" />
 			<xsd:element minOccurs="0" name="spt"
-				type="bons1:Sluttpoengtall" />
+				type="v1:Sluttpoengtall" />
 
 			<xsd:element minOccurs="0" name="ypt"
-				type="bons1:Sluttpoengtall">
+				type="v1:Sluttpoengtall">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="yrkesskadegrad"
 				type="xsd:double">
@@ -96,6 +90,9 @@
 			<xsd:element minOccurs="0"
 				name="minstenivatilleggPensjonistpar" type="xsd:int">
 			</xsd:element>
+			<xsd:element minOccurs="0"
+				name="minstenivatilleggIndividuelt" type="xsd:int">
+			</xsd:element>
 			<xsd:element minOccurs="0" name="afpLivsvarig"
 				type="xsd:int">
 			</xsd:element>
@@ -115,13 +112,13 @@
 				type="xsd:string">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="sptAvdod"
-				type="bons1:Sluttpoengtall">
+				type="v1:Sluttpoengtall">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="yptAvdod"
-				type="bons1:Sluttpoengtall">
+				type="v1:Sluttpoengtall">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="optAvdod"
-				type="bons1:Sluttpoengtall">
+				type="v1:Sluttpoengtall">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="yrkesskadegradAvdod"
 				type="xsd:double">
@@ -129,19 +126,15 @@
 			<xsd:element minOccurs="0" name="anvendtTrygdetidAvdod"
 				type="xsd:int">
 			</xsd:element>
-			<xsd:element minOccurs="0"
-				name="minstenivatilleggIndividuelt" type="xsd:int">
+			<xsd:element minOccurs="0" name="utvidelse"
+				type="v1:Beregning2011Utvidelse1">
 			</xsd:element>
-
 
 			<xsd:element minOccurs="0" name="skjermingstillegg"
 				type="xsd:int">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="uforegrad"
 				type="xsd:int">
-			</xsd:element>
-			<xsd:element minOccurs="0" name="utvidelse"
-				type="bons2:Beregning2011Utvidelse1">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
