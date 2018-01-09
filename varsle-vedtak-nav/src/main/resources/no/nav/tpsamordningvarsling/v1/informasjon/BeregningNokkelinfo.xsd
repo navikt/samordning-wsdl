@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V0_5" targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_5">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:bons0="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
+            targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon">
     <xsd:include schemaLocation="Sluttpoengtall.xsd"/>
     <xsd:complexType name="BeregningNokkelinfo">
     <xsd:sequence>

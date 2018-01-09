@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TPSamordningVarsling"
+                  targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1"
+                  xmlns:feil="http://nav.no/samordning/tjenester/varslevedtak/v1/feil"
+                  xmlns:tns="http://nav.no/samordning/tjenester/varslevedtak/v1"
+                  xmlns:meldinger="http://nav.no/samordning/tjenester/varslevedtak/v1/meldinger"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1">
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslevedtak/v1/feil" schemaLocation="feil/FaultGenerisk.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslevedtak/v1/meldinger" schemaLocation="meldinger/VarsleVedtakNAVReq.xsd"/>
+            <xsd:element name="varsleVedtakNAV">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="varsleVedtakNAVReq" nillable="true" type="meldinger:VarsleVedtakNAVReq"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="varsleVedtakNAVResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+            <xsd:element name="varsleVedtakNAVFault1_faultGenerisk" nillable="true" type="feil:FaultGenerisk"/>
+            <xsd:element name="operation1Fault1_faultGenerisk" nillable="true" type="feil:FaultGenerisk"/>
+        <xsd:element name="ping">
+            <xsd:complexType>
+                <xsd:sequence/>
+            </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="pingResponse">
+            <xsd:complexType>
+                <xsd:sequence/>
+            </xsd:complexType>
+        </xsd:element>
+        </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="varsleVedtakNAVRequestMsg">
+    <wsdl:part element="tns:varsleVedtakNAV" name="varsleVedtakNAVParameters"/>
+  </wsdl:message>
+    <wsdl:message name="varsleVedtakNAVResponseMsg">
+    <wsdl:part element="tns:varsleVedtakNAVResponse" name="varsleVedtakNAVResult"/>
+  </wsdl:message>
+    <wsdl:message name="varsleVedtakNAV_faultGeneriskMsg">
+    <wsdl:part element="tns:varsleVedtakNAVFault1_faultGenerisk" name="faultGenerisk"/>
+  </wsdl:message>
+     <wsdl:message name="varsleEndringPersonalia_faultGeneriskMsg">
+    <wsdl:part element="tns:operation1Fault1_faultGenerisk" name="faultGenerisk"/>
+  </wsdl:message>
+    <wsdl:message name="pingResponse">
+        <wsdl:part name="parameters" element="tns:pingResponse">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="pingRequest">
+        <wsdl:part name="parameters" element="tns:ping">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="TPSamordningVarsling">
+    <wsdl:operation name="varsleVedtakNAV">
+      <wsdl:input message="tns:varsleVedtakNAVRequestMsg" name="varsleVedtakNAVRequest"/>
+            <wsdl:output message="tns:varsleVedtakNAVResponseMsg" name="varsleVedtakNAVResponse"/>
+            <wsdl:fault message="tns:varsleVedtakNAV_faultGeneriskMsg" name="faultGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="ping">
+            <wsdl:input message="tns:pingRequest">
+            </wsdl:input>
+            <wsdl:output message="tns:pingResponse">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

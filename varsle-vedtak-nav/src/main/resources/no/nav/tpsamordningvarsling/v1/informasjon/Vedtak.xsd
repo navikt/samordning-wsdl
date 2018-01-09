@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V1_0"
-	xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V0_5"
-	xmlns:bons1="http://nav.no/elsam/tpsamordningvarsling/V0_7"
-	xmlns:bons2="http://nav.no/elsam/tpsamordningvarsling/V0_8"
-	xmlns:bons3="http://nav.no/elsam/tpsamordningvarsling/V1_0">
+	targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
+	xmlns:tns="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon">
 	<xsd:include schemaLocation="BeregningUforetrygd.xsd"></xsd:include>
-	<xsd:import
-		namespace="http://nav.no/elsam/tpsamordningvarsling/V0_8"
-		schemaLocation="../../V0_8/asbo/Beregning2011.xsd" />
-	<xsd:import
-		namespace="http://nav.no/elsam/tpsamordningvarsling/V0_7"
-		schemaLocation="../../V0_7/asbo/Beregning.xsd" />
-	<xsd:import
-		namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5"
-		schemaLocation="../../V0_5/asbo/Vilkarsvedtak.xsd" />
+	<xsd:include schemaLocation="Beregning2011.xsd" />
+	<xsd:include schemaLocation="Beregning.xsd" />
+	<xsd:include schemaLocation="Vilkarsvedtak.xsd" />
 	<xsd:complexType name="Vedtak">
 		<xsd:sequence>
 			<xsd:element minOccurs="1" name="vedtakId"
@@ -38,7 +29,7 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element maxOccurs="unbounded" minOccurs="0"
-				name="barnListe" type="bons0:Vilkarsvedtak" />
+				name="barnListe" type="tns:Vilkarsvedtak" />
 			<xsd:element minOccurs="0" name="typeKrigspensjon">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
@@ -55,7 +46,7 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element maxOccurs="unbounded" minOccurs="0"
-				name="beregningListe" type="bons1:Beregning" />
+				name="beregningListe" type="tns:Beregning" />
 			<xsd:element minOccurs="0" name="vedtaksKode">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
@@ -71,7 +62,7 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element maxOccurs="unbounded" minOccurs="0"
-				name="beregning2011Liste" type="bons2:Beregning2011" />
+				name="beregning2011Liste" type="tns:Beregning2011" />
 			<xsd:element minOccurs="0" name="regelverkKode">
 				<xsd:simpleType>
 					<xsd:restriction base="xsd:string">
@@ -83,7 +74,7 @@
 				</xsd:simpleType>
 			</xsd:element>
 			<xsd:element maxOccurs="unbounded" minOccurs="0"
-				name="beregningUforetrygdListe" type="bons3:BeregningUforetrygd">
+				name="beregningUforetrygdListe" type="tns:BeregningUforetrygd">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>

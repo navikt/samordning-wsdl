@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_7"
+<xsd:schema targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<xsd:complexType name="BeregningUtvidelse1">
 		<xsd:annotation>

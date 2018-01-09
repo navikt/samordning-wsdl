@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V1_0">
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon">
 	<xsd:complexType name="BeregningUforetrygd">
 		<xsd:sequence>
 			<xsd:element minOccurs="0" name="fom" type="xsd:date"/>
@@ -48,6 +48,12 @@
 			<xsd:element minOccurs="0" name="yrkesskadegradAvdod" type="xsd:int">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="inntektBruktIInntektsavkorting" type="xsd:int">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+						 name="ufoeretidspunkt" type="xsd:date">
+			</xsd:element>
+			<xsd:element minOccurs="0"
+						 name="beloepsgrense" type="xsd:int">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>

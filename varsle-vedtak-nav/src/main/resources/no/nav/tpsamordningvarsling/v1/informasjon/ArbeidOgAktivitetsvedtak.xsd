@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_5">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon">
 	<xsd:complexType name="ArbeidOgAktivitetsvedtak">
 		<xsd:sequence>
 			<xsd:element minOccurs="0" name="vedtakId" type="xsd:string">
@@ -31,6 +31,8 @@
 			<xsd:element minOccurs="0" name="beregningsgrunnlag" type="xsd:string">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="antallBarn" type="xsd:int">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="aktivitetsfaseKode" type="xsd:string">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
