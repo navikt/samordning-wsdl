@@ -6,7 +6,6 @@
 	<xsd:include schemaLocation="BeregningUforetrygd.xsd"></xsd:include>
 	<xsd:include schemaLocation="Vilkarsvedtak.xsd"></xsd:include>
 	<xsd:include schemaLocation="Beregning2011.xsd"></xsd:include>
-	<xsd:include schemaLocation="VedtakUtvidelse1.xsd"></xsd:include>
 	<xsd:include schemaLocation="Beregning.xsd"></xsd:include>
 
 	<xsd:complexType name="Vedtak">
@@ -80,9 +79,6 @@
 						<xsd:enumeration value="N_REG_N_OPPTJ" />
 					</xsd:restriction>
 				</xsd:simpleType>
-			</xsd:element>
-			<xsd:element minOccurs="0" name="utvidelse"
-				type="v1:VedtakUtvidelse1">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="beregningUforetrygdListe"
 				type="v1:BeregningUforetrygd" maxOccurs="unbounded">

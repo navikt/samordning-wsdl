@@ -4,7 +4,6 @@
 	xmlns:v1="http://nav.no/samordning/tjenester/vedlikeholdtpforhold/v1/informasjon"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<xsd:include schemaLocation="Sluttpoengtall.xsd"></xsd:include>
-	<xsd:include schemaLocation="Beregning2011Utvidelse1.xsd"></xsd:include>
 
 	<xsd:complexType name="Beregning2011">
 		<xsd:sequence>
@@ -125,9 +124,6 @@
 			</xsd:element>
 			<xsd:element minOccurs="0" name="anvendtTrygdetidAvdod"
 				type="xsd:int">
-			</xsd:element>
-			<xsd:element minOccurs="0" name="utvidelse"
-				type="v1:Beregning2011Utvidelse1">
 			</xsd:element>
 
 			<xsd:element minOccurs="0" name="skjermingstillegg"

@@ -2,7 +2,6 @@
 <xsd:schema targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
 			xmlns:tns="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:include schemaLocation="BeregningUtvidelse1.xsd"/>
 	<xsd:include schemaLocation="BeregningNokkelinfo.xsd" />
 	<xsd:include schemaLocation="KrigOgGammelYrkesskade.xsd" />
 
@@ -47,8 +46,6 @@
 			<xsd:element minOccurs="0" name="minstenivatilleggPensjonistpar" type="xsd:int">
 			</xsd:element>
 			<xsd:element minOccurs="0" name="minstenivatilleggIndividuelt" type="xsd:int">
-			</xsd:element>
-			<xsd:element minOccurs="0" name="utvidelse" type="tns:BeregningUtvidelse1">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>

@@ -3,7 +3,6 @@
 	xmlns:v1="http://nav.no/samordning/tjenester/samordningsdata/v1/informasjon"
 	targetNamespace="http://nav.no/samordning/tjenester/samordningsdata/v1/informasjon">
 
-	<xsd:include schemaLocation="BeregningUtvidelse1.xsd"></xsd:include>
 	<xsd:include schemaLocation="BeregningNokkelinfo.xsd"></xsd:include>
 	<xsd:include schemaLocation="KrigOgGammelYrkesskade.xsd"></xsd:include>
 
@@ -88,9 +87,6 @@
 				name="minstenivatilleggPensjonistpar" type="xsd:int">
 			</xsd:element>
 
-			<xsd:element minOccurs="0" name="utvidelse"
-				type="v1:BeregningUtvidelse1">
-			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
 </xsd:schema>

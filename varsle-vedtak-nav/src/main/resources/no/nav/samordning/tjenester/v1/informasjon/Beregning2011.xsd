@@ -3,7 +3,6 @@
 	targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
 	xmlns:tns="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:include schemaLocation="Beregning2011Utvidelse1.xsd" />
 	<xsd:include
 		schemaLocation="Sluttpoengtall.xsd" />
 	<xsd:complexType name="Beregning2011">
@@ -133,9 +132,6 @@
 			</xsd:element>
 			<xsd:element minOccurs="0" name="uforegrad"
 				type="xsd:int">
-			</xsd:element>
-			<xsd:element minOccurs="0" name="utvidelse"
-				type="tns:Beregning2011Utvidelse1">
 			</xsd:element>
 		</xsd:sequence>
 	</xsd:complexType>
