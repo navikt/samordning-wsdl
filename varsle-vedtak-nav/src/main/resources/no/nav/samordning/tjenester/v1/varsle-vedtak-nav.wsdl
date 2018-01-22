@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions name="TPSamordningVarsling"
+<wsdl:definitions name="varsle-vedtak-nav"
                   targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1"
                   xmlns:feil="http://nav.no/samordning/tjenester/varslevedtak/v1/feil"
                   xmlns:tns="http://nav.no/samordning/tjenester/varslevedtak/v1"
@@ -56,7 +56,7 @@
         <wsdl:part name="parameters" element="tns:ping">
         </wsdl:part>
     </wsdl:message>
-    <wsdl:portType name="TPSamordningVarsling">
+    <wsdl:portType name="varsle-vedtak-nav">
     <wsdl:operation name="varsleVedtakNAV">
       <wsdl:input message="tns:varsleVedtakNAVRequestMsg" name="varsleVedtakNAVRequest"/>
             <wsdl:output message="tns:varsleVedtakNAVResponseMsg" name="varsleVedtakNAVResponse"/>

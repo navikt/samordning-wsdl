@@ -6,11 +6,11 @@ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
     <wsdl:import
     	namespace="http://nav.no/samordning/tjenester/varslevedtak/v1"
-    	location="TPSamordningVarsling.wsdl">
+    	location="varsle-vedtak-nav.wsdl">
     </wsdl:import>
     <wsdl:binding
-    	name="TPSamordningVarsling_v1Binding"
-    	type="Port_0:TPSamordningVarsling">
+    	name="varsleVedtakNAV_v1Binding"
+    	type="Port_0:varsle-vedtak-nav">
     	<soap:binding style="document"
     		transport="http://schemas.xmlsoap.org/soap/http" />
     	<wsdl:operation name="varsleVedtakNAV">
@@ -26,7 +26,7 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
     		</wsdl:fault>
     	</wsdl:operation>
 		<wsdl:operation name="ping">
-			<soap:operation soapAction="http://nav.no/samordning/tjenester/vedlikeholdtpforhold/v1/Vedlikeholdtpforhold_v1/pingRequest"/>
+			<soap:operation soapAction=""/>
 			<wsdl:input>
 				<soap:body parts="parameters" use="literal"/>
 			</wsdl:input>
@@ -35,9 +35,9 @@ xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
 			</wsdl:output>
 		</wsdl:operation>
     </wsdl:binding>
-    <wsdl:service name="TPSamordningVarsling_v1">
-    <wsdl:port binding="bons1:TPSamordningVarsling_v1Binding" name="TPSamordningVarsling_v1Port">
-      <soap:address location="http://localhost:9080/tpsamordningvarsling"/>
+    <wsdl:service name="varsleVedtakNAV_v1">
+    <wsdl:port binding="bons1:varsleVedtakNAV_v1Binding" name="varsleVedtakNAV_v1Port">
+      <soap:address location="http://localhost:9080/varsleVedtakNAV"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
