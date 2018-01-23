@@ -7,32 +7,7 @@
 
     <groupId>no.nav.samordning.wsdl</groupId>
     <artifactId>varsle-vedtak-aap-wsdl</artifactId>
-    <version>1-SNAPSHOT</version>
-
-    <!--build>
-        <plugins>
-            <plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.13.2</version>
-                <executions>
-                    <execution>
-                        <id>varslevedtakaapwsdlgen</id>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <schemaDirectory>${project.basedir}/src/main/resources/no/nav/samordning/tjenester/varslevedtakaap/v1</schemaDirectory>
-                            <strict>false</strict>
-                            <schemaIncludes>
-                                <include>VarsleVedtakAAPSamordning.wsdl</include>
-                            </schemaIncludes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build-->
+    <version>1.0</version>
 
     <build>
         <plugins>
@@ -86,6 +61,7 @@
                             <descriptors>
                                 <descriptor>assembly/schemas.xml</descriptor>
                             </descriptors>
+                            <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
                 </executions>

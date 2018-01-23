@@ -7,7 +7,7 @@
 
     <groupId>no.nav.samordning.wsdl</groupId>
     <artifactId>varsle-vedtak-nav-wsdl</artifactId>
-    <version>1-SNAPSHOT</version>
+    <version>1</version>
 
 
 </project>
