@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nav.no/samordning/tjenester/samordningsdata/v1/feil"
+            xmlns:tns="http://nav.no/samordning/tjenester/samordningsdata/v1/feil">
+    <xsd:include schemaLocation="FaultBase.xsd"/>
+  <xsd:complexType name="FaultSikkerhet">
+    <xsd:complexContent>
+      <xsd:extension base="tns:FaultBase">
+        <xsd:sequence/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

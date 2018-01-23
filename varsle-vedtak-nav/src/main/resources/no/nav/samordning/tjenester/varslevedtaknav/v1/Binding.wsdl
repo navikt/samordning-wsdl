@@ -6,11 +6,11 @@ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
 xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
     <wsdl:import
     	namespace="http://nav.no/samordning/tjenester/varslevedtak/v1"
-    	location="varsle-vedtak-nav.wsdl">
+    	location="varslevedtaknav.wsdl">
     </wsdl:import>
     <wsdl:binding
     	name="varsleVedtakNAV_v1Binding"
-    	type="Port_0:varsle-vedtak-nav">
+    	type="Port_0:varslevedtaknav">
     	<soap:binding style="document"
     		transport="http://schemas.xmlsoap.org/soap/http" />
     	<wsdl:operation name="varsleVedtakNAV">

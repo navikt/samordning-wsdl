@@ -29,6 +29,7 @@
       </xsd:element>
 
       <xsd:element name="hentSamordningsdata_faultTPForholdIkkeIverksatt" type="feil:FaultTPForholdIkkeIverksatt"/>
+      <xsd:element name="hentSamordningsdata_faultSikkerhet" type="feil:FaultSikkerhet"/>
       <xsd:element name="hentSamordningsdata_faultGenerisk" type="feil:FaultGenerisk"/>
       <xsd:element name="ping">
         <xsd:complexType>
@@ -55,6 +56,9 @@
   <wsdl:message name="hentSamordningsdata_faultTPForholdIkkeIverksattMsg">
     <wsdl:part element="tns:hentSamordningsdata_faultTPForholdIkkeIverksatt" name="faultTPForholdIkkeIverksatt"/>
   </wsdl:message>
+  <wsdl:message name="hentSamordningsdata_faultSikkerhetMsg">
+    <wsdl:part element="tns:hentSamordningsdata_faultSikkerhet" name="faultSikkerhet"/>
+  </wsdl:message>
   <wsdl:message name="pingResponse">
     <wsdl:part name="parameters" element="tns:pingResponse">
     </wsdl:part>
@@ -70,6 +74,8 @@
       <wsdl:output message="tns:hentSamordningsdataResponseMsg" name="hentSamordningsdataResponse"/>
       <wsdl:fault message="tns:hentSamordningsdata_faultGeneriskMsg" name="faultGenerisk"/>
       <wsdl:fault message="tns:hentSamordningsdata_faultTPForholdIkkeIverksattMsg" name="faultTPForholdIkkeIverksatt"/>
+      <wsdl:fault message="tns:hentSamordningsdata_faultSikkerhetMsg" name="faultSikkerhet"/>
+
     </wsdl:operation>
     <wsdl:operation name="ping">
       <wsdl:input message="tns:pingRequest">

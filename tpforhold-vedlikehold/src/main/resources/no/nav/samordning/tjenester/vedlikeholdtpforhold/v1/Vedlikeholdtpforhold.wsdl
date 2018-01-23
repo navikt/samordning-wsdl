@@ -27,7 +27,7 @@
   </xsd:element>
       <xsd:element name="lagreTPYtelse_faultGenerisk" type="feil:FaultGenerisk"/>
       <xsd:element name="lagreTPYtelse_faultTPYtelseAlleredeRegistrert" type="feil:FaultTPYtelseAlleredeRegistrert"/>
-
+        <xsd:element name="lagreTPYtelse_faultSikkerhet" type="feil:FaultSikkerhet"/>
       <xsd:element name="ping">
         <xsd:complexType>
           <xsd:sequence/>
@@ -52,6 +52,9 @@
   <wsdl:message name="lagreTPYtelse_faultTPYtelseAlleredeRegistrertMsg">
     <wsdl:part element="tns:lagreTPYtelse_faultTPYtelseAlleredeRegistrert" name="faultTPYtelseAlleredeRegistrert"/>
   </wsdl:message>
+    <wsdl:message name="lagreTPYtelse_faultSikkerhetMsg">
+        <wsdl:part element="tns:lagreTPYtelse_faultSikkerhet" name="faultSikkerhet"/>
+    </wsdl:message>
   <wsdl:message name="pingResponse">
     <wsdl:part name="parameters" element="tns:pingResponse">
     </wsdl:part>
@@ -67,7 +70,8 @@
       <wsdl:output message="tns:lagreTPYtelseResponseMsg" name="lagreTPYtelseResponse"/>
      <wsdl:fault message="tns:lagreTPYtelse_faultGeneriskMsg" name="faultGenerisk"/>
        <wsdl:fault message="tns:lagreTPYtelse_faultTPYtelseAlleredeRegistrertMsg" name="faultTPYtelseAlleredeRegistrert"/>
-     </wsdl:operation>
+       <wsdl:fault message="tns:lagreTPYtelse_faultSikkerhetMsg" name="faultSikkerhet"/>
+    </wsdl:operation>
       <wsdl:operation name="ping">
          <wsdl:input message="tns:pingRequest">
          </wsdl:input>

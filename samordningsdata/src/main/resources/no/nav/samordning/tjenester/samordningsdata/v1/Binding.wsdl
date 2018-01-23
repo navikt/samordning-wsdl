@@ -21,6 +21,9 @@
       <wsdl:fault name="faultTPForholdIkkeIverksatt">
         <soap:fault name="faultTPForholdIkkeIverksatt" use="literal"/>
       </wsdl:fault>
+      <wsdl:fault name="faultSikkerhet">
+        <soap:fault name="faultSikkerhet" use="literal"/>
+      </wsdl:fault>
       <wsdl:fault name="faultGenerisk">
         <soap:fault name="faultGenerisk" use="literal"/>
       </wsdl:fault>
