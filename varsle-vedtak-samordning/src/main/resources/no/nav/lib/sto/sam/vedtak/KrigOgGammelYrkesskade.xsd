@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam" targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
+            targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
     <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
-  <xsd:complexType name="KrigOgGammelYrkesskade">
-    <xsd:complexContent>
-      <xsd:extension base="bons0:Ytelseskomponent">
+    <xsd:complexType name="KrigOgGammelYrkesskade">
+        <xsd:complexContent>
+            <xsd:extension base="bons0:Ytelseskomponent">
                 <xsd:sequence>
-          <xsd:element minOccurs="0" name="pensjonsgrad" type="xsd:int"/>
-          <xsd:element minOccurs="0" name="grunnlagForUtbetaling" type="xsd:int"/>
-          <xsd:element minOccurs="0" name="kapitalUtlosning" type="xsd:string"/>
-          <xsd:element minOccurs="0" name="poengtall" type="xsd:string"/>
-          <xsd:element minOccurs="0" name="forholdstallYG" type="xsd:double"/>
-          <xsd:element minOccurs="0" name="mendel" type="xsd:string"/>
-        </xsd:sequence>
+                    <xsd:element minOccurs="0" name="pensjonsgrad" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="grunnlagForUtbetaling" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="kapitalUtlosning" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="poengtall" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="forholdstallYG" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="mendel" type="xsd:string"/>
+                </xsd:sequence>
             </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
+        </xsd:complexContent>
+    </xsd:complexType>
 </xsd:schema>

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema
-	xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
-	xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
-	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+<xsd:schema xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
+			xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
 	<xsd:import schemaLocation="../EndringsInfo.xsd"
 		namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam">
 	</xsd:import>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam" targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
-    <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam" schemaLocation="../EndringsInfo.xsd"/>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
+            targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+    <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
+                schemaLocation="../EndringsInfo.xsd"/>
     <xsd:complexType name="TrygdetidKonvensjon">
     <xsd:sequence>
       <xsd:element minOccurs="0" name="trygdetidKonvensjonId" type="xsd:string"/>

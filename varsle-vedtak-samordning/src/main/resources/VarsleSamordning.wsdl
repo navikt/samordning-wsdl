@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:bons5="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Samordning"
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning"
+                  xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault"
+                  xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Samordning"
                   targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf">
   <wsdl:types>
-    <xsd:schema xmlns:Q1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" xmlns:bons4="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:bons5="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:schema xmlns:Q1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning"
+                targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf"
+                xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning"
+                xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault"
+                xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="no/nav/lib/sto/sam/fault/PersonIkkeFunnet.xsd"/>
             <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" schemaLocation="no/nav/lib/sto/sam/samordning/VarsleVedtakSamordningRequest.xsd"/>
             <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" schemaLocation="no/nav/lib/sto/sam/samordning/VarsleTPSamordningRequest.xsd"/>
