@@ -2,15 +2,15 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
                   xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
                   xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
-                  xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf"
+                  xmlns:tns="http://nav.no/samordning/tjenester/varslesamordning/v1"
                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Samordning"
-                  targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf">
+                  targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
   <wsdl:types>
     <xsd:schema xmlns:Q1="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning"
-                targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf"
+                targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1"
                 xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
                 xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
-                xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf"
+                xmlns:tns="http://nav.no/samordning/tjenester/varslesamordning/v1"
                 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/PersonIkkeFunnet.xsd"/>
             <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleVedtakSamordningRequest.xsd"/>

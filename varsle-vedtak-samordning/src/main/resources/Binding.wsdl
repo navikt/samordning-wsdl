@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions name="VarsleSamordning" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf/Binding" xmlns:Port_0="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav-cons-sto-sam-samordning/no/nav/inf/Binding">
-  <wsdl:import namespace="http://nav-cons-sto-sam-samordning/no/nav/inf" location="VarsleSamordning.wsdl">
+<wsdl:definitions name="VarsleSamordning" targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/Binding" xmlns:Port_0="http://nav.no/samordning/tjenester/varslesamordning/v1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:this="http://nav.no/samordning/tjenester/varslesamordning/v1/Binding">
+  <wsdl:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1" location="VarsleSamordning.wsdl">
     </wsdl:import>
   <wsdl:binding name="VarsleSamordning_v1Binding" type="Port_0:VarsleSamordning_v1">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
