@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak" targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+    <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam" schemaLocation="../EndringsInfo.xsd"/>
+    <xsd:include schemaLocation="TrygdetidKonvensjon.xsd"/>
+    <xsd:include schemaLocation="TrygdetidEOS.xsd"/>
+    <xsd:complexType name="Trygdetid">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="trygdetidId" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="framtidigTrygdetid" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="framtidigTrygdetidRedusert" type="xsd:boolean"/>
+      <xsd:element minOccurs="0" name="trygdetidEtterUFT" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetidEtterDod" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetidOverfort" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetidGaranti" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetid" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetidFaktiskMnd" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetid67Til70" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetidEtter66" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetidFor67" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="opptjeningsperiode" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="trygdetidKonvensjon" type="bons1:TrygdetidKonvensjon"/>
+      <xsd:element minOccurs="0" name="trygdetidEOS" type="bons1:TrygdetidEOS"/>
+      <xsd:element minOccurs="0" name="endringsInfo" type="bons0:EndringsInfo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

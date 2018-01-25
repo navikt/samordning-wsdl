@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sak" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sak/vedtak" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak" xmlns:bons3="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam" targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+    <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam" schemaLocation="../EndringsInfo.xsd"/>
+    <xsd:include schemaLocation="Poengrekke.xsd"/>
+    <xsd:complexType name="Sluttpoengtall">
+    <xsd:sequence>
+      <xsd:element minOccurs="0" name="poengtall" type="xsd:string"/>
+      <xsd:element minOccurs="0" name="poengrekke" type="bons2:Poengrekke"/>
+            <xsd:element minOccurs="0" name="poengtillegg" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="poengtallEos" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="poengtallA10" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fppGradEos" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endringsInfo" type="bons3:EndringsInfo"/>
+        </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

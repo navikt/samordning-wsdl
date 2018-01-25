@@ -12,14 +12,14 @@
       <wsdl:output name="varsleEndringPersonaliaResponse">
         <soap:body use="literal"/>
       </wsdl:output>
-      <wsdl:fault name="faultStoTSSEksternIdIkkeFunnet">
-        <soap:fault name="faultStoTSSEksternIdIkkeFunnet" use="literal"/>
+      <wsdl:fault name="TSSEksternIdIkkeFunnet">
+        <soap:fault name="TSSEksternIdIkkeFunnet" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoGenerisk">
-        <soap:fault name="faultStoGenerisk" use="literal"/>
+      <wsdl:fault name="Generisk">
+        <soap:fault name="Generisk" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen">
-        <soap:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
+      <wsdl:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen">
+        <soap:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="varsleManglendeRefusjonskrav">
@@ -30,14 +30,14 @@
       <wsdl:output name="varsleManglendeRefusjonskravResponse">
         <soap:body use="literal"/>
       </wsdl:output>
-      <wsdl:fault name="faultStoGenerisk">
-        <soap:fault name="faultStoGenerisk" use="literal"/>
+      <wsdl:fault name="Generisk">
+        <soap:fault name="Generisk" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen">
-        <soap:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
+      <wsdl:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen">
+        <soap:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoTPNummerIkkeGyldig">
-        <soap:fault name="faultStoTPNummerIkkeGyldig" use="literal"/>
+      <wsdl:fault name="TPNummerIkkeGyldig">
+        <soap:fault name="TPNummerIkkeGyldig" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="varsleTPSamordning">
@@ -48,14 +48,14 @@
       <wsdl:output name="varsleTPSamordningResponse">
         <soap:body use="literal"/>
       </wsdl:output>
-      <wsdl:fault name="faultStoTSSEksternIdIkkeFunnet">
-        <soap:fault name="faultStoTSSEksternIdIkkeFunnet" use="literal"/>
+      <wsdl:fault name="TSSEksternIdIkkeFunnet">
+        <soap:fault name="TSSEksternIdIkkeFunnet" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoGenerisk">
-        <soap:fault name="faultStoGenerisk" use="literal"/>
+      <wsdl:fault name="Generisk">
+        <soap:fault name="Generisk" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen">
-        <soap:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
+      <wsdl:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen">
+        <soap:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="varsleVedtakSamordning">
@@ -66,17 +66,17 @@
       <wsdl:output name="varsleVedtakSamordningResponse">
         <soap:body use="literal"/>
       </wsdl:output>
-      <wsdl:fault name="faultStoTSSEksternIdIkkeFunnet">
-        <soap:fault name="faultStoTSSEksternIdIkkeFunnet" use="literal"/>
+      <wsdl:fault name="TSSEksternIdIkkeFunnet">
+        <soap:fault name="TSSEksternIdIkkeFunnet" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoPersonIkkeFunnet">
-        <soap:fault name="faultStoPersonIkkeFunnet" use="literal"/>
+      <wsdl:fault name="PersonIkkeFunnet">
+        <soap:fault name="PersonIkkeFunnet" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoGenerisk">
-        <soap:fault name="faultStoGenerisk" use="literal"/>
+      <wsdl:fault name="Generisk">
+        <soap:fault name="Generisk" use="literal"/>
       </wsdl:fault>
-      <wsdl:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen">
-        <soap:fault name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
+      <wsdl:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen">
+        <soap:fault name="NAVHarIkkeWSGrensesnittMotTPOrdningen" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
