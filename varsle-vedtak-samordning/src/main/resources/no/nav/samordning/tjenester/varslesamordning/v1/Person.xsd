@@ -3,14 +3,18 @@
             xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1/person"
             xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1"
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
-    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person" schemaLocation="person/PersonUtland.xsd"/>
-    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person" schemaLocation="person/Utbetalingsinformasjon.xsd"/>
-    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person" schemaLocation="person/Brukerprofil.xsd"/>
-    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person" schemaLocation="person/BostedsAdresse.xsd"/>
+    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person"
+                schemaLocation="person/PersonUtland.xsd"/>
+    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person"
+                schemaLocation="person/Utbetalingsinformasjon.xsd"/>
+    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person"
+                schemaLocation="person/Brukerprofil.xsd"/>
+    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person"
+                schemaLocation="person/BostedsAdresse.xsd"/>
     <xsd:include schemaLocation="Adresse.xsd"/>
     <xsd:complexType name="Person">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="fnr" type="xsd:string"/>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="fnr" type="xsd:string"/>
             <xsd:element minOccurs="0" name="kortnavn" type="xsd:string"/>
             <xsd:element minOccurs="0" name="fornavn" type="xsd:string"/>
             <xsd:element minOccurs="0" name="mellomnavn" type="xsd:string"/>
@@ -39,5 +43,5 @@
             <xsd:element minOccurs="0" name="personUtland" type="bons0:PersonUtland"/>
             <xsd:element minOccurs="0" name="brukerprofil" type="bons0:Brukerprofil"/>
         </xsd:sequence>
-  </xsd:complexType>
+    </xsd:complexType>
 </xsd:schema>

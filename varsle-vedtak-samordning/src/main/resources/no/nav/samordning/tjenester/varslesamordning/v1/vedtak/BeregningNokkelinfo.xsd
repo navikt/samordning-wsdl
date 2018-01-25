@@ -7,9 +7,9 @@
                 schemaLocation="../EndringsInfo.xsd"/>
     <xsd:include schemaLocation="Sluttpoengtall.xsd"/>
     <xsd:complexType name="BeregningNokkelinfo">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="beregningNokkelinfoId" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="fnr" type="xsd:string"/>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="beregningNokkelinfoId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fnr" type="xsd:string"/>
             <xsd:element minOccurs="0" name="grunnlagsrolleKode" type="xsd:string"/>
             <xsd:element minOccurs="0" name="beregningId" type="xsd:string"/>
             <xsd:element minOccurs="0" name="tt_anv" type="xsd:string"/>
@@ -19,5 +19,5 @@
             <xsd:element minOccurs="0" name="opt" type="bons0:Sluttpoengtall"/>
             <xsd:element minOccurs="0" name="endringsInfo" type="bons1:EndringsInfo"/>
         </xsd:sequence>
-  </xsd:complexType>
+    </xsd:complexType>
 </xsd:schema>

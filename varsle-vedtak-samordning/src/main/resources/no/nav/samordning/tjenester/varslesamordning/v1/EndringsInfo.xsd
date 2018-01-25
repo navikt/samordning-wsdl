@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
-  <xsd:complexType name="EndringsInfo">
-    <xsd:sequence>
+    <xsd:complexType name="EndringsInfo">
+        <xsd:sequence>
             <xsd:element minOccurs="0" name="opprettetAvId" type="xsd:string"/>
             <xsd:element minOccurs="0" name="opprettetAvNavn" type="xsd:string"/>
             <xsd:element minOccurs="0" name="opprettetAvEnhetId" type="xsd:string"/>
@@ -16,5 +16,5 @@
             <xsd:element minOccurs="0" name="kildeId" type="xsd:string"/>
             <xsd:element minOccurs="0" name="kildeNavn" type="xsd:string"/>
         </xsd:sequence>
-  </xsd:complexType>
+    </xsd:complexType>
 </xsd:schema>

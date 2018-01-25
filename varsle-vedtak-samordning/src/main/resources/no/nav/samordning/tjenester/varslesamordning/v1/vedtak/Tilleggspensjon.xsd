@@ -5,15 +5,15 @@
     <xsd:include schemaLocation="Sluttpoengtall.xsd"/>
     <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
     <xsd:complexType name="Tilleggspensjon">
-    <xsd:complexContent>
-      <xsd:extension base="bons0:Ytelseskomponent">
+        <xsd:complexContent>
+            <xsd:extension base="bons0:Ytelseskomponent">
                 <xsd:sequence>
-      <xsd:element minOccurs="0" name="spt" type="bons0:Sluttpoengtall"/>
+                    <xsd:element minOccurs="0" name="spt" type="bons0:Sluttpoengtall"/>
                     <xsd:element minOccurs="0" name="ypt" type="bons0:Sluttpoengtall"/>
                     <xsd:element minOccurs="0" name="opt" type="bons0:Sluttpoengtall"/>
                 </xsd:sequence>
-                  
+
             </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
+        </xsd:complexContent>
+    </xsd:complexType>
 </xsd:schema>

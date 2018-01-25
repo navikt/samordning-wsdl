@@ -4,11 +4,11 @@
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning">
     <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1" schemaLocation="../Person.xsd"/>
     <xsd:complexType name="VarsleEndringPersonaliaRequest">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="tpnr" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="tssEksternId" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="opprinneligFnr" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="endretPerson" type="bons1:Person"/>
-    </xsd:sequence>
-  </xsd:complexType>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="tpnr" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="tssEksternId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="opprinneligFnr" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endretPerson" type="bons1:Person"/>
+        </xsd:sequence>
+    </xsd:complexType>
 </xsd:schema>

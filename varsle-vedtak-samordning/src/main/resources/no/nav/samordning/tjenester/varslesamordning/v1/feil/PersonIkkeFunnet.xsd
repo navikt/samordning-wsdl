@@ -4,10 +4,10 @@
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil">
     <xsd:include schemaLocation="Base.xsd"/>
     <xsd:complexType name="PersonIkkeFunnet">
-    <xsd:complexContent>
-      <xsd:extension base="bons0:Base">
-        <xsd:sequence/>
-      </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
+        <xsd:complexContent>
+            <xsd:extension base="bons0:Base">
+                <xsd:sequence/>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
 </xsd:schema>

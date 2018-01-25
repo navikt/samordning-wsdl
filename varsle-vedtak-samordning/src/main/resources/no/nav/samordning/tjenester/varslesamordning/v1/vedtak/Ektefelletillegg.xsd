@@ -4,13 +4,13 @@
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
     <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
     <xsd:complexType name="Ektefelletillegg">
-    <xsd:complexContent>
-      <xsd:extension base="bons0:Ytelseskomponent">
+        <xsd:complexContent>
+            <xsd:extension base="bons0:Ytelseskomponent">
                 <xsd:sequence>
-      <xsd:element minOccurs="0" name="fribelop" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="fribelop" type="xsd:string"/>
                 </xsd:sequence>
-                  
+
             </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
+        </xsd:complexContent>
+    </xsd:complexType>
 </xsd:schema>

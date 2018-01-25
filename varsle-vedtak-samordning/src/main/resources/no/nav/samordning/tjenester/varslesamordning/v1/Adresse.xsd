@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
-  <xsd:complexType name="Adresse">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="adresseType" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="adresselinje1" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="adresselinje2" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="adresselinje3" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="postnr" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="poststed" type="xsd:string"/>
+    <xsd:complexType name="Adresse">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="adresseType" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="adresselinje1" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="adresselinje2" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="adresselinje3" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="postnr" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="poststed" type="xsd:string"/>
             <xsd:element minOccurs="0" name="landkode" type="xsd:string"/>
             <xsd:element minOccurs="0" name="land" type="xsd:string"/>
             <xsd:element minOccurs="0" name="fom" type="xsd:date"/>
         </xsd:sequence>
-  </xsd:complexType>
+    </xsd:complexType>
 </xsd:schema>

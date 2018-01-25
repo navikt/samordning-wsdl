@@ -5,15 +5,15 @@
     <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1"
                 schemaLocation="../EndringsInfo.xsd"/>
     <xsd:complexType name="Ytelseskomponent">
-    <xsd:sequence>
-      <xsd:element minOccurs="0" name="ytelseskomponentId" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="brutto" type="xsd:string"/>
-      <xsd:element minOccurs="0" name="netto" type="xsd:string"/>
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="ytelseskomponentId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="brutto" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="netto" type="xsd:string"/>
             <xsd:element minOccurs="0" name="fradrag" type="xsd:string"/>
             <xsd:element minOccurs="0" name="erBrukt" type="xsd:boolean"/>
             <xsd:element minOccurs="0" name="ytelseskomponentKode" type="xsd:string"/>
             <xsd:element minOccurs="0" name="resultatKilde" type="xsd:string"/>
             <xsd:element minOccurs="0" name="endringsInfo" type="bons0:EndringsInfo"/>
         </xsd:sequence>
-  </xsd:complexType>
+    </xsd:complexType>
 </xsd:schema>

@@ -4,13 +4,13 @@
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
     <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
     <xsd:complexType name="Grunnpensjon">
-    <xsd:complexContent>
-      <xsd:extension base="bons0:Ytelseskomponent">
+        <xsd:complexContent>
+            <xsd:extension base="bons0:Ytelseskomponent">
                 <xsd:sequence>
-      <xsd:element minOccurs="0" name="grunnpensjonsats" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="grunnpensjonsats" type="xsd:double"/>
                 </xsd:sequence>
-                  
+
             </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
+        </xsd:complexContent>
+    </xsd:complexType>
 </xsd:schema>

@@ -3,13 +3,13 @@
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
     <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
-  <xsd:complexType name="Hjelpeloshetsbidrag">
-    <xsd:complexContent>
-      <xsd:extension base="bons0:Ytelseskomponent">
+    <xsd:complexType name="Hjelpeloshetsbidrag">
+        <xsd:complexContent>
+            <xsd:extension base="bons0:Ytelseskomponent">
                 <xsd:sequence>
-          <xsd:element minOccurs="0" name="grunnlagForUtbetaling" type="xsd:string"/>
-        </xsd:sequence>
+                    <xsd:element minOccurs="0" name="grunnlagForUtbetaling" type="xsd:string"/>
+                </xsd:sequence>
             </xsd:extension>
-    </xsd:complexContent>
-  </xsd:complexType>
+        </xsd:complexContent>
+    </xsd:complexType>
 </xsd:schema>
