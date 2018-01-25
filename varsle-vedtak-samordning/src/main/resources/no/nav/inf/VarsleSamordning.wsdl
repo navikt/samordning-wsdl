@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:bons5="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SAMSamordning" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf">
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:bons5="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Samordning"
+                  targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf">
   <wsdl:types>
     <xsd:schema xmlns:Q1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" xmlns:bons4="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/" targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/asbo/samordning" xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" xmlns:bons5="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
             <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="../lib/sto/sam/fault/FaultStoPersonIkkeFunnet.xsd"/>
@@ -145,7 +146,7 @@
     <wsdl:message name="varsleVedtakSamordning_faultStoNAVHarIkkeWSGrensesnittMotTPOrdningenMsg">
     <wsdl:part element="tns:varsleVedtakSamordning_faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen" name="faultStoNAVHarIkkeWSGrensesnittMotTPOrdningen"/>
   </wsdl:message>
-    <wsdl:portType name="SAMSamordning">
+    <wsdl:portType name="VarsleSamordning_v1">
     <wsdl:operation name="varsleEndringPersonalia">
       <wsdl:input message="tns:varsleEndringPersonaliaRequestMsg" name="varsleEndringPersonaliaRequest"/>
       <wsdl:output message="tns:varsleEndringPersonaliaResponseMsg" name="varsleEndringPersonaliaResponse"/>

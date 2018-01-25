@@ -23,7 +23,7 @@
                             <sourceRoot>${project.basedir}/src/main/java</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/nav-cons-sto-sam-samordning_SAMSamordningWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/Binding.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>
