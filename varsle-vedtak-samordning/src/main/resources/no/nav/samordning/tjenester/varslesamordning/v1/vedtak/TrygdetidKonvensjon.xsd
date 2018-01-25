@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
-            targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
-    <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
+            xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
+    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1"
                 schemaLocation="../EndringsInfo.xsd"/>
     <xsd:complexType name="TrygdetidKonvensjon">
     <xsd:sequence>

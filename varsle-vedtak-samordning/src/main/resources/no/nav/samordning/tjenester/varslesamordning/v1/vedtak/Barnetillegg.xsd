@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
+<xsd:schema xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
     <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
     <xsd:complexType name="Barnetillegg">
     <xsd:complexContent>

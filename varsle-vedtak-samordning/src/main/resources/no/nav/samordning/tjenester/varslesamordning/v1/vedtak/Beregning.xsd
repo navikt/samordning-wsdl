@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
-			xmlns:bons3="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
+<xsd:schema xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
+			xmlns:bons3="http://nav.no/samordning/tjenester/varslesamordning/v1"
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+			targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
 	<xsd:include schemaLocation="Tilleggspensjon.xsd"></xsd:include>
 	<xsd:import schemaLocation="../EndringsInfo.xsd"
-		namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam">
+		namespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
 	</xsd:import>
 	<xsd:include schemaLocation="Ektefelletillegg.xsd"></xsd:include>
 	<xsd:include schemaLocation="Sertillegg.xsd"></xsd:include>

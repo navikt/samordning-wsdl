@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
-			xmlns:bons3="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
-			targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak">
+			xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
+			xmlns:bons3="http://nav.no/samordning/tjenester/varslesamordning/v1"
+			targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
 	<xsd:include
 		schemaLocation="BeregningsResultatUforetrygd.xsd">
 	</xsd:include>
 	<xsd:include schemaLocation="Beregning2011.xsd"></xsd:include>
 	<xsd:include schemaLocation="AFPEO.xsd" />
 	<xsd:import
-		namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam"
+		namespace="http://nav.no/samordning/tjenester/varslesamordning/v1"
 		schemaLocation="../EndringsInfo.xsd">
 	</xsd:import>
 	<xsd:include schemaLocation="Kravhode.xsd" />

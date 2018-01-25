@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
-                  xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning"
-                  xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault"
+                  xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                  xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
                   xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf"
                   xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Samordning"
                   targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf">
   <wsdl:types>
-    <xsd:schema xmlns:Q1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning"
+    <xsd:schema xmlns:Q1="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning"
                 targetNamespace="http://nav-cons-sto-sam-samordning/no/nav/inf"
-                xmlns:bons1="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning"
-                xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault"
+                xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
                 xmlns:tns="http://nav-cons-sto-sam-samordning/no/nav/inf"
                 xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/fault/PersonIkkeFunnet.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleVedtakSamordningRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleTPSamordningRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/fault/Generisk.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/fault/samordning/TPNummerIkkeGyldig.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/fault/samordning/TSSEksternIdIkkeFunnet.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/fault/samordning/NAVHarIkkeWSGrensesnittMotTPOrdningen.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleManglendeRefusjonskravRequest.xsd"/>
-            <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleEndringPersonaliaRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/PersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleVedtakSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleTPSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/Generisk.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/samordning/TPNummerIkkeGyldig.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/samordning/TSSEksternIdIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/samordning/NAVHarIkkeWSGrensesnittMotTPOrdningen.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleManglendeRefusjonskravRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning" schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleEndringPersonaliaRequest.xsd"/>
             <xsd:element name="varsleEndringPersonalia">
         <xsd:complexType>
           <xsd:sequence>

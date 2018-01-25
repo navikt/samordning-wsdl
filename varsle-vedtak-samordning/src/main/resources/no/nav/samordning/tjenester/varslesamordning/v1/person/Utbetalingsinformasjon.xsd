@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/person"
-            targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/person">
+            xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1/person"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/person">
     <xsd:include schemaLocation="NorskKonto.xsd"/>
     <xsd:complexType name="Utbetalingsinformasjon">
     <xsd:sequence>

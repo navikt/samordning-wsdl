@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-			xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning"
-			xmlns:bons2="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
-			targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/samordning">
+			xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+			xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
+			targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning">
     <xsd:include schemaLocation="ArbeidOgAktivitetsvedtak.xsd"/>
-	<xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/vedtak"
+	<xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
 				schemaLocation="../vedtak/Vedtak.xsd"/>
 	<xsd:complexType name="VarsleVedtakSamordningRequest">
 		<xsd:sequence>

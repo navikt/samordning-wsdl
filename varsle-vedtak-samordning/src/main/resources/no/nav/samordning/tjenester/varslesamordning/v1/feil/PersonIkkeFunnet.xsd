@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault"
-            targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault">
+            xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil">
     <xsd:include schemaLocation="Base.xsd"/>
     <xsd:complexType name="PersonIkkeFunnet">
     <xsd:complexContent>

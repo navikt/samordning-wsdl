@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns:bons0="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault"
-            targetNamespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault/samordning">
-  <xsd:import namespace="http://nav-lib-cons-sto-sam/no/nav/lib/sto/sam/fault" schemaLocation="../Base.xsd"/>
+            xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning">
+  <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil" schemaLocation="../Base.xsd"/>
   <xsd:complexType name="TSSEksternIdIkkeFunnet">
     <xsd:complexContent>
       <xsd:extension base="bons0:Base">
