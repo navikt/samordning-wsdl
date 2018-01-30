@@ -87,7 +87,7 @@
     </wsdl:binding>
     <wsdl:service name="VarsleSamordning_v1">
         <wsdl:port name="VarsleSamordning_v1Port" binding="this:VarsleSamordning_v1Binding">
-            <soap:address location="http://localhost:9080/nav-cons-sto-sam-samordningWeb/sca/SAMSamordningWSEXP"/>
+            <soap:address location="http://localhost:80/ws/varsleSamordning_v1"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
