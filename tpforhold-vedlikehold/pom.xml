@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>no.nav.samordning.wsdl</groupId>
-    <artifactId>varsle-vedtak-nav-wsdl</artifactId>
+    <artifactId>tpforhold-vedlikehold-wsdl</artifactId>
     <version>1.0</version>
 
     <build>
@@ -23,8 +23,8 @@
                             <sourceRoot>${project.basedir}/src/main/java</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/no/nav/samordning/tjenester/varslevedtaknav/v1/Binding.wsdl</wsdl>
-                                    <wsdlLocation>no/nav/samordning/tjenester/varslevedtaknav/v1/Binding.wsdl</wsdlLocation>
+                                    <wsdl>${basedir}/src/main/resources/no/nav/samordning/tjenester/vedlikeholdtpforhold/v1/Binding.wsdl</wsdl>
+                                    <wsdlLocation>no/nav/samordning/tjenester/vedlikeholdtpforhold/v1/Binding.wsdl</wsdlLocation>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>

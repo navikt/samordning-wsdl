@@ -2,7 +2,6 @@
 <xsd:schema targetNamespace="http://nav.no/samordning/tjenester/varslevedtak/v1/meldinger"
 			xmlns:informasjon="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon"
 			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:include schemaLocation="../informasjon/Vedtak.xsd"/>
 	<xsd:import namespace="http://nav.no/samordning/tjenester/varslevedtak/v1/informasjon" schemaLocation="../informasjon/informasjonsmodell.xsd"/>
 	<xsd:complexType name="VarsleVedtakNAVReq">
 		<xsd:sequence>
