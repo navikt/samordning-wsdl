@@ -7,7 +7,7 @@
 
     <groupId>no.nav.samordning.wsdl</groupId>
     <artifactId>varsle-vedtak-samordning-wsdl</artifactId>
-    <version>1</version>
+    <version>1.0</version>
 
     <build>
         <plugins>
@@ -23,7 +23,7 @@
                             <sourceRoot>${project.basedir}/src/main/java</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/nav-cons-sto-sam-samordning_SAMSamordningWSEXP.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/Binding.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>
@@ -66,4 +66,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>m2internal</id>
+            <name>NAV Maven2 Internal Repository</name>
+            <url>http://maven.adeo.no/nexus/content/repositories/m2internal</url>
+        </repository>
+        <snapshotRepository>
+            <id>m2snapshot</id>
+            <name>NAV Maven2 Snapshot Repository</name>
+            <url>http://maven.adeo.no/nexus/content/repositories/m2snapshot</url>
+            <uniqueVersion>false</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

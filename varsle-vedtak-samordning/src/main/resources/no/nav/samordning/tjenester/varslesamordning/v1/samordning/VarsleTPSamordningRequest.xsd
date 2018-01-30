@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning">
+    <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
+                schemaLocation="../vedtak/SamordningInfo.xsd"/>
+    <xsd:complexType name="VarsleTPSamordningRequest">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="tpnr" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="tssEksternId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fnr" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="samordningInfo" type="bons2:SamordningInfo"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

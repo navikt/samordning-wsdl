@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
+    <xsd:import schemaLocation="../EndringsInfo.xsd"
+                namespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
+    </xsd:import>
+    <xsd:complexType name="Vilkarsvedtak">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="vilkarsvedtakId"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="anbefaltResultatKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="vilkarsvedtakResultatKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="anvendtVurderingKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0"
+                         name="vilkarsvedtakResultatSpesKode" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="kravlinjeKode"
+                         type="xsd:string"/>
+
+            <xsd:element minOccurs="0" name="innstillingKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="virkningFom"
+                         type="xsd:date"/>
+            <xsd:element minOccurs="0" name="virkningTom"
+                         type="xsd:date"/>
+            <xsd:element minOccurs="0" name="forsteVirkningsDato"
+                         type="xsd:date"/>
+            <xsd:element minOccurs="0" name="gjelderFnr"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="endringsInfo"
+                         type="bons1:EndringsInfo"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

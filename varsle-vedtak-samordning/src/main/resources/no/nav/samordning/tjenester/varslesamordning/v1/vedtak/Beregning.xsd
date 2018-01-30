@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
+            xmlns:bons3="http://nav.no/samordning/tjenester/varslesamordning/v1"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
+    <xsd:include schemaLocation="Tilleggspensjon.xsd"></xsd:include>
+    <xsd:import schemaLocation="../EndringsInfo.xsd"
+                namespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
+    </xsd:import>
+    <xsd:include schemaLocation="Ektefelletillegg.xsd"></xsd:include>
+    <xsd:include schemaLocation="Sertillegg.xsd"></xsd:include>
+    <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
+    <xsd:include schemaLocation="Trygdetid.xsd"/>
+    <xsd:include schemaLocation="Hjelpeloshetsbidrag.xsd"/>
+    <xsd:include schemaLocation="TilleggTilHjelpIHuset.xsd"/>
+    <xsd:include schemaLocation="KrigOgGammelYrkesskade.xsd"/>
+    <xsd:include schemaLocation="UforeEkstra.xsd"/>
+
+    <xsd:include schemaLocation="Grunnpensjon.xsd"/>
+    <xsd:include schemaLocation="Ventetillegg.xsd"/>
+    <xsd:include schemaLocation="BeregningNokkelinfo.xsd"/>
+    <xsd:include schemaLocation="Barnetillegg.xsd"/>
+
+    <xsd:complexType name="Beregning">
+        <xsd:sequence>
+            <xsd:element minOccurs="0" name="beregningId"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="virkDatoFom"
+                         type="xsd:date"/>
+            <xsd:element minOccurs="0" name="virkDatoTom"
+                         type="xsd:date"/>
+            <xsd:element minOccurs="0" name="gjelderFnr"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="brutto" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="netto" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="grunnbelop"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="beregningKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="resultatKilde"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="resultatKode"
+                         type="xsd:string"/>
+
+            <xsd:element minOccurs="0" name="p67beregning"
+                         type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="gradert"
+                         type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="friinntekt"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="fribelop"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="afpPensjonsgrad"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="totalVinner"
+                         type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="kravId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="sakId" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="ektefelleInntektOver2g"
+                         type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="ektefelleMottarPensjon"
+                         type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="benyttetSivilstandKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="brukersSivilstandKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="beregnetFremtidigInntekt"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="minstepensjonKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="trygdetidAnvendt"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="redusertPgaInstOpphold"
+                         type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="inntektBruktIAvkorting"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="beregningsMetodeKode"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="uforegrad"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="yrkesskadegrad"
+                         type="xsd:string"/>
+            <xsd:element minOccurs="0" name="brukOpptjeningFra5I66Aret"
+                         type="xsd:boolean"/>
+            <xsd:element minOccurs="0" name="grunnpensjon"
+                         type="bons2:Grunnpensjon"/>
+            <xsd:element minOccurs="0" name="tilleggspensjon"
+                         type="bons2:Tilleggspensjon"/>
+            <xsd:element minOccurs="0" name="sertillegg"
+                         type="bons2:Sertillegg"/>
+            <xsd:element minOccurs="0" name="afpTillegg"
+                         type="bons2:Ytelseskomponent"/>
+            <xsd:element minOccurs="0" name="ektefelletillegg"
+                         type="bons2:Ektefelletillegg"/>
+            <xsd:element minOccurs="0" name="barnetilleggFellesBarn"
+                         type="bons2:Barnetillegg"/>
+            <xsd:element minOccurs="0" name="barnetilleggSerkullsbarn"
+                         type="bons2:Barnetillegg"/>
+            <xsd:element minOccurs="0" name="ventetillegg"
+                         type="bons2:Ventetillegg"/>
+            <xsd:element minOccurs="0" name="familietillegg"
+                         type="bons2:Ytelseskomponent"/>
+            <xsd:element minOccurs="0" name="fasteUtgifterTillegg"
+                         type="bons2:Ytelseskomponent"/>
+            <xsd:element minOccurs="0" name="paragraf851Tillegg"
+                         type="bons2:Ytelseskomponent"/>
+            <xsd:element minOccurs="0" name="krigOgGammelYrkesskade"
+                         type="bons2:KrigOgGammelYrkesskade"/>
+            <xsd:element minOccurs="0" name="tilleggTilHjelpIHuset"
+                         type="bons2:TilleggTilHjelpIHuset"/>
+            <xsd:element minOccurs="0" name="hjelpeloshetsbidrag"
+                         type="bons2:Hjelpeloshetsbidrag"/>
+            <xsd:element minOccurs="0" name="uforeEkstra"
+                         type="bons2:UforeEkstra"/>
+            <xsd:element minOccurs="0" name="trygdetid"
+                         type="bons2:Trygdetid"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0"
+                         name="beregningNokkelinfoListe"
+                         type="bons2:BeregningNokkelinfo"/>
+            <xsd:element minOccurs="0" name="endringsInfo"
+                         type="bons3:EndringsInfo"/>
+            <xsd:element minOccurs="0" name="brukerFpi"
+                         type="xsd:int">
+            </xsd:element>
+            <xsd:element minOccurs="0"
+                         name="minstenivatilleggPensjonistpar" type="xsd:string">
+            </xsd:element>
+            <xsd:element minOccurs="0"
+                         name="minstenivatilleggIndividuelt" type="xsd:string">
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

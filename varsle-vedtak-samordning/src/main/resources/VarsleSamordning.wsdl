@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                  xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
+                  xmlns:tns="http://nav.no/samordning/tjenester/varslesamordning/v1"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Samordning"
+                  targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1">
+    <wsdl:types>
+        <xsd:schema xmlns:Q1="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning"
+                    targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1"
+                    xmlns:bons1="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                    xmlns:bons2="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
+                    xmlns:tns="http://nav.no/samordning/tjenester/varslesamordning/v1"
+                    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/PersonIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleVedtakSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleTPSamordningRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/Generisk.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/samordning/TPNummerIkkeGyldig.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/samordning/TSSEksternIdIkkeFunnet.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/feil/samordning"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/feil/samordning/NAVHarIkkeWSGrensesnittMotTPOrdningen.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleManglendeRefusjonskravRequest.xsd"/>
+            <xsd:import namespace="http://nav.no/samordning/tjenester/varslesamordning/v1/samordning"
+                        schemaLocation="no/nav/samordning/tjenester/varslesamordning/v1/samordning/VarsleEndringPersonaliaRequest.xsd"/>
+            <xsd:element name="varsleEndringPersonalia">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleEndringPersonaliaRequest" nillable="true"
+                                     type="bons1:VarsleEndringPersonaliaRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleEndringPersonaliaResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleEndringPersonaliaResponse" nillable="true" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleManglendeRefusjonskrav">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleManglendeRefusjonskravRequest" nillable="true"
+                                     type="bons1:VarsleManglendeRefusjonskravRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleManglendeRefusjonskravResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleManglendeRefusjonskravResponse" nillable="true" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleTPSamordning">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleTPSamordningRequest" nillable="true"
+                                     type="bons1:VarsleTPSamordningRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleTPSamordningResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleTPSamordningResponse" nillable="true" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakSamordning">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleVedtakSamordningRequest" nillable="true"
+                                     type="bons1:VarsleVedtakSamordningRequest"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakSamordningResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleVedtakSamordningResponse" nillable="true" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleEndringPersonalia_Generisk" type="bons2:Generisk"/>
+            <xsd:element name="varsleManglendeRefusjonskrav_Generisk" type="bons2:Generisk"/>
+            <xsd:element name="varsleManglendeRefusjonskrav_TPNummerIkkeGyldig" type="Q1:TPNummerIkkeGyldig"/>
+            <xsd:element name="varsleTPSamordning_Generisk" type="bons2:Generisk"/>
+            <xsd:element name="varsleVedtakSamordning_Generisk" type="bons2:Generisk"/>
+            <xsd:element name="varsleEndringPersonalia_TSSEksternIdIkkeFunnet" type="Q1:TSSEksternIdIkkeFunnet"/>
+            <xsd:element name="varsleTPSamordning_TSSEksternIdIkkeFunnet" type="Q1:TSSEksternIdIkkeFunnet"/>
+            <xsd:element name="varsleVedtakSamordning_PersonIkkeFunnet" type="bons2:PersonIkkeFunnet"/>
+            <xsd:element name="varsleVedtakSamordning_TSSEksternIdIkkeFunnet" type="Q1:TSSEksternIdIkkeFunnet"/>
+            <xsd:element name="varsleEndringPersonalia_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                         type="Q1:NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+            <xsd:element name="varsleManglendeRefusjonskrav_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                         type="Q1:NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+            <xsd:element name="varsleTPSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                         type="Q1:NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+            <xsd:element name="varsleVedtakSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                         type="Q1:NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="varsleEndringPersonaliaRequestMsg">
+        <wsdl:part element="tns:varsleEndringPersonalia" name="varsleEndringPersonaliaParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringPersonaliaResponseMsg">
+        <wsdl:part element="tns:varsleEndringPersonaliaResponse" name="varsleEndringPersonaliaResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskravRequestMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskrav" name="varsleManglendeRefusjonskravParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskravResponseMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskravResponse" name="varsleManglendeRefusjonskravResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleTPSamordningRequestMsg">
+        <wsdl:part element="tns:varsleTPSamordning" name="varsleTPSamordningParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleTPSamordningResponseMsg">
+        <wsdl:part element="tns:varsleTPSamordningResponse" name="varsleTPSamordningResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordningRequestMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning" name="varsleVedtakSamordningParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordningResponseMsg">
+        <wsdl:part element="tns:varsleVedtakSamordningResponse" name="varsleVedtakSamordningResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringPersonalia_GeneriskMsg">
+        <wsdl:part element="tns:varsleEndringPersonalia_Generisk" name="Generisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskrav_GeneriskMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskrav_Generisk" name="Generisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskrav_TPNummerIkkeGyldigMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskrav_TPNummerIkkeGyldig" name="TPNummerIkkeGyldig"/>
+    </wsdl:message>
+    <wsdl:message name="varsleTPSamordning_GeneriskMsg">
+        <wsdl:part element="tns:varsleTPSamordning_Generisk" name="Generisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_GeneriskMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_Generisk" name="Generisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringPersonalia_TSSEksternIdIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleEndringPersonalia_TSSEksternIdIkkeFunnet" name="TSSEksternIdIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleTPSamordning_TSSEksternIdIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleTPSamordning_TSSEksternIdIkkeFunnet" name="TSSEksternIdIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_PersonIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_PersonIkkeFunnet" name="PersonIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_TSSEksternIdIkkeFunnetMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_TSSEksternIdIkkeFunnet" name="TSSEksternIdIkkeFunnet"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringPersonalia_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg">
+        <wsdl:part element="tns:varsleEndringPersonalia_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                   name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskrav_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskrav_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                   name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+    </wsdl:message>
+    <wsdl:message name="varsleTPSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg">
+        <wsdl:part element="tns:varsleTPSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                   name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg">
+        <wsdl:part element="tns:varsleVedtakSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningen"
+                   name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+    </wsdl:message>
+    <wsdl:portType name="VarsleSamordning_v1">
+        <wsdl:operation name="varsleEndringPersonalia">
+            <wsdl:input message="tns:varsleEndringPersonaliaRequestMsg" name="varsleEndringPersonaliaRequest"/>
+            <wsdl:output message="tns:varsleEndringPersonaliaResponseMsg" name="varsleEndringPersonaliaResponse"/>
+            <wsdl:fault message="tns:varsleEndringPersonalia_GeneriskMsg" name="Generisk"/>
+            <wsdl:fault message="tns:varsleEndringPersonalia_TSSEksternIdIkkeFunnetMsg" name="TSSEksternIdIkkeFunnet"/>
+            <wsdl:fault message="tns:varsleEndringPersonalia_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg"
+                        name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+        </wsdl:operation>
+        <wsdl:operation name="varsleManglendeRefusjonskrav">
+            <wsdl:input message="tns:varsleManglendeRefusjonskravRequestMsg"
+                        name="varsleManglendeRefusjonskravRequest"/>
+            <wsdl:output message="tns:varsleManglendeRefusjonskravResponseMsg"
+                         name="varsleManglendeRefusjonskravResponse"/>
+            <wsdl:fault message="tns:varsleManglendeRefusjonskrav_GeneriskMsg" name="Generisk"/>
+            <wsdl:fault message="tns:varsleManglendeRefusjonskrav_TPNummerIkkeGyldigMsg" name="TPNummerIkkeGyldig"/>
+            <wsdl:fault message="tns:varsleManglendeRefusjonskrav_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg"
+                        name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+        </wsdl:operation>
+        <wsdl:operation name="varsleTPSamordning">
+            <wsdl:input message="tns:varsleTPSamordningRequestMsg" name="varsleTPSamordningRequest"/>
+            <wsdl:output message="tns:varsleTPSamordningResponseMsg" name="varsleTPSamordningResponse"/>
+            <wsdl:fault message="tns:varsleTPSamordning_GeneriskMsg" name="Generisk"/>
+            <wsdl:fault message="tns:varsleTPSamordning_TSSEksternIdIkkeFunnetMsg" name="TSSEksternIdIkkeFunnet"/>
+            <wsdl:fault message="tns:varsleTPSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg"
+                        name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+        </wsdl:operation>
+        <wsdl:operation name="varsleVedtakSamordning">
+            <wsdl:input message="tns:varsleVedtakSamordningRequestMsg" name="varsleVedtakSamordningRequest"/>
+            <wsdl:output message="tns:varsleVedtakSamordningResponseMsg" name="varsleVedtakSamordningResponse"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_GeneriskMsg" name="Generisk"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_PersonIkkeFunnetMsg" name="PersonIkkeFunnet"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_TSSEksternIdIkkeFunnetMsg" name="TSSEksternIdIkkeFunnet"/>
+            <wsdl:fault message="tns:varsleVedtakSamordning_NAVHarIkkeWSGrensesnittMotTPOrdningenMsg"
+                        name="NAVHarIkkeWSGrensesnittMotTPOrdningen"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:bons0="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://nav.no/samordning/tjenester/varslesamordning/v1/vedtak">
+    <xsd:include schemaLocation="Ytelseskomponent.xsd"/>
+    <xsd:complexType name="Ventetillegg">
+        <xsd:complexContent>
+            <xsd:extension base="bons0:Ytelseskomponent">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="ventetilleggGrunnpensjon" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="ventetilleggTilleggspensjon" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="ventetilleggProsent" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>
