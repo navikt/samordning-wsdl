@@ -30,7 +30,7 @@
     </wsdl:binding>
     <wsdl:service name="VarsleVedtakAAPSamordning_v1">
         <wsdl:port name="varsleVedtakAAPSamordning_v1Port" binding="tns:VarsleVedtakAAPSamordning_v1Binding">
-            <soap:address location="http://localhost:80/ws/varsleVedtakAAPSamordning_v1"/>
+            <soap:address location="https://localhost:80/ws/varsleVedtakAAPSamordning_v1"/>
         </wsdl:port>
     </wsdl:service>
 </wsdl:definitions>
