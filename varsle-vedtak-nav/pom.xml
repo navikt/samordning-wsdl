@@ -20,7 +20,7 @@
                         <id>generate-sources</id>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <sourceRoot>${project.basedir}/src/main/java</sourceRoot>
+                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/no/nav/samordning/tjenester/varslevedtaknav/v1/Binding.wsdl</wsdl>
@@ -71,14 +71,14 @@
 
     <distributionManagement>
         <repository>
-            <id>m2internal</id>
-            <name>NAV Maven2 Internal Repository</name>
-            <url>http://maven.adeo.no/nexus/content/repositories/m2internal</url>
+            <id>iapp-releases</id>
+            <name>NAV Nexus3 Internal Repository</name>
+            <url>https://repo.adeo.no/repository/maven-releases</url>
         </repository>
         <snapshotRepository>
-            <id>m2snapshot</id>
-            <name>NAV Maven2 Snapshot Repository</name>
-            <url>http://maven.adeo.no/nexus/content/repositories/m2snapshot</url>
+            <id>iapp-snapshots</id>
+            <name>NAV Nexus3 Snapshot Repository</name>
+            <url>https://repo.adeo.no/repository/maven-snapshots</url>
             <uniqueVersion>false</uniqueVersion>
         </snapshotRepository>
     </distributionManagement>
