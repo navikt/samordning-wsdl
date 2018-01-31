@@ -10,6 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>samordningsdata</module>
+        <module>tpforhold-vedlikehold</module>
         <module>varsle-vedtak-samordning</module>
         <module>varsle-vedtak-nav</module>
         <module>varsle-vedtak-aap</module>
