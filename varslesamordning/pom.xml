@@ -20,7 +20,7 @@
                         <id>generate-sources</id>
                         <phase>generate-sources</phase>
                         <configuration>
-                            <sourceRoot>${project.basedir}/src/main/java</sourceRoot>
+                            <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
                                     <wsdl>${basedir}/src/main/resources/no/nav/samordning/tjenester/varslesamordning/v1/Binding.wsdl</wsdl>
@@ -58,8 +58,11 @@
                             <goal>single</goal>
                         </goals>
                         <configuration>
+                            <!--<descriptorRefs>
+                                <descriptorRef>src</descriptorRef>
+                            </descriptorRefs>-->
                             <descriptors>
-                                <descriptor>assembly/schemas.xml</descriptor>
+                                <descriptor>src/assembly/schemas.xml</descriptor>
                             </descriptors>
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>

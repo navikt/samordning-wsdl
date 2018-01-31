@@ -59,7 +59,7 @@
                         </goals>
                         <configuration>
                             <descriptors>
-                                <descriptor>assembly/schemas.xml</descriptor>
+                                <descriptor>src/assembly/schemas.xml</descriptor>
                             </descriptors>
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
