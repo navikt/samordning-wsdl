@@ -17,7 +17,7 @@ node {
     stage("deploy") {
         def mvnHome = tool "maven-3.3.9"
         withEnv(["PATH+MAVEN=${mvnHome}/bin"]) {
-            sh "mvn -B -V -fn deploy -DskipTests"
+            sh "mvn -B -V -fn deploy -DskipTests -Dmaven.install.skip=true"
         }
     }
 }
