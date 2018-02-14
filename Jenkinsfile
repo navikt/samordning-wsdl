@@ -1,23 +1,36 @@
+#!/usr/bin/env groovy
+@Library('peon-pipeline') _
+
 node {
-    cleanWs()
+    def commitHash
+    try {
+        cleanWs()
 
-    stage("checkout") {
-        withEnv(['HTTPS_PROXY=http://webproxy-utvikler.nav.no:8088']) {
-            sh(script: "git clone https://github.com/navikt/samordning-wsdl.git .")
-        }
-    }
+        stage("checkout") {
+            sh "git clone https://github.com/navikt/samordning-wsdl.git ."
 
-    stage("build") {
-        def mvnHome = tool "maven-3.3.9"
-        withEnv(["PATH+MAVEN=${mvnHome}/bin"]) {
-            sh "mvn -B -V verify"
+            commitHash = sh(script: 'git rev-parse HEAD', returnStdout: true).trim()
+            github.commitStatus("navikt-ci-oauthtoken", "navikt/samordning-wsdl", 'continuous-integration/jenkins', commitHash, 'pending', "Build #${env.BUILD_NUMBER} has started")
         }
-    }
 
-    stage("deploy") {
-        def mvnHome = tool "maven-3.3.9"
-        withEnv(["PATH+MAVEN=${mvnHome}/bin"]) {
-            sh "mvn -B -V -fn deploy -DskipTests -Dmaven.install.skip=true"
+        stage("build") {
+            def mvnHome = tool "maven-3.3.9"
+            withEnv(["PATH+MAVEN=${mvnHome}/bin"]) {
+                sh "mvn -B -V verify"
+            }
         }
+
+        stage("deploy") {
+            def mvnHome = tool "maven-3.3.9"
+            withEnv(["PATH+MAVEN=${mvnHome}/bin"]) {
+                sh "mvn -B -V -fn deploy -DskipTests -Dmaven.install.skip=true"
+            }
+        }
+
+        github.commitStatus("navikt-ci-oauthtoken", "navikt/samordning-wsdl", 'continuous-integration/jenkins', commitHash, 'success', "Build #${env.BUILD_NUMBER} has finished")
+    } catch (err) {
+        github.commitStatus("navikt-ci-oauthtoken", "navikt/samordning-wsdl", 'continuous-integration/jenkins', commitHash, 'failure', "Build #${env.BUILD_NUMBER} has failed")
+
+        throw err
     }
 }
