@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Opprettsamordning"
+                  targetNamespace="http://nav.no/samordning/tjenester/opprettsamordning/v1"
+                  xmlns:tns="http://nav.no/samordning/tjenester/opprettsamordning/v1"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:meldinger="http://nav.no/samordning/tjenester/opprettsamordning/v1/meldinger"
+                  xmlns:feil="http://nav.no/samordning/tjenester/opprettsamordning/v1/feil"
+>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav.no/samordning/tjenester/opprettsamordning/v1">
+        <xsd:import namespace="http://nav.no/samordning/tjenester/opprettsamordning/v1/meldinger" schemaLocation="meldinger/meldinger.xsd"/>
+        <xsd:import namespace="http://nav.no/samordning/tjenester/opprettsamordning/v1/feil" schemaLocation="feil/feil.xsd"/>
+      <xsd:element name="lagreTPYtelse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="lagreTPYtelseReq" nillable="true" type="meldinger:LagreTPYtelseReq"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="lagreTPYtelseResponse">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="lagreTPYtelseResp" nillable="true" type="meldinger:LagreTPYtelseResp"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+      <xsd:element name="lagreTPYtelse_faultGenerisk" type="feil:FaultGenerisk"/>
+      <xsd:element name="lagreTPYtelse_faultTPYtelseAlleredeRegistrert" type="feil:FaultTPYtelseAlleredeRegistrert"/>
+        <xsd:element name="lagreTPYtelse_faultSikkerhet" type="feil:FaultSikkerhet"/>
+      <xsd:element name="ping">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pingResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="lagreTPYtelseRequestMsg">
+    <wsdl:part element="tns:lagreTPYtelse" name="lagreTPYtelseParameters"/>
+  </wsdl:message>
+  <wsdl:message name="lagreTPYtelseResponseMsg">
+    <wsdl:part element="tns:lagreTPYtelseResponse" name="lagreTPYtelseResult"/>
+  </wsdl:message>
+  <wsdl:message name="lagreTPYtelse_faultGeneriskMsg">
+    <wsdl:part element="tns:lagreTPYtelse_faultGenerisk" name="faultGenerisk"/>
+  </wsdl:message>
+  <wsdl:message name="lagreTPYtelse_faultTPYtelseAlleredeRegistrertMsg">
+    <wsdl:part element="tns:lagreTPYtelse_faultTPYtelseAlleredeRegistrert" name="faultTPYtelseAlleredeRegistrert"/>
+  </wsdl:message>
+    <wsdl:message name="lagreTPYtelse_faultSikkerhetMsg">
+        <wsdl:part element="tns:lagreTPYtelse_faultSikkerhet" name="faultSikkerhet"/>
+    </wsdl:message>
+  <wsdl:message name="pingResponse">
+    <wsdl:part name="parameters" element="tns:pingResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingRequest">
+    <wsdl:part name="parameters" element="tns:ping">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Opprettsamordning_v1">
+
+    <wsdl:operation name="lagreTPYtelse">
+      <wsdl:input message="tns:lagreTPYtelseRequestMsg" name="lagreTPYtelseRequest"/>
+      <wsdl:output message="tns:lagreTPYtelseResponseMsg" name="lagreTPYtelseResponse"/>
+     <wsdl:fault message="tns:lagreTPYtelse_faultGeneriskMsg" name="faultGenerisk"/>
+       <wsdl:fault message="tns:lagreTPYtelse_faultTPYtelseAlleredeRegistrertMsg" name="faultTPYtelseAlleredeRegistrert"/>
+       <wsdl:fault message="tns:lagreTPYtelse_faultSikkerhetMsg" name="faultSikkerhet"/>
+    </wsdl:operation>
+      <wsdl:operation name="ping">
+         <wsdl:input message="tns:pingRequest">
+         </wsdl:input>
+         <wsdl:output message="tns:pingResponse">
+         </wsdl:output>
+       </wsdl:operation>
+     </wsdl:portType>
+   </wsdl:definitions>

@@ -11,6 +11,7 @@
 
     <modules>
         <module>samordningsdata</module>
+        <module>opprett-samordning</module>
         <module>tpforhold-vedlikehold</module>
         <module>varsle-vedtak-samordning</module>
         <module>varsle-vedtak-nav</module>

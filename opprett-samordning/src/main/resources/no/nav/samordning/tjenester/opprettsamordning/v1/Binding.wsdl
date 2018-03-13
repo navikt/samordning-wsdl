@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+        name="Binding"
+        targetNamespace="http://nav.no/samordning/tjenester/opprettsamordning/v1/binding"
+        xmlns:port="http://nav.no/samordning/tjenester/opprettsamordning/v1"
+        xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+        xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+        xmlns:tns="http://nav.no/samordning/tjenester/opprettsamordning/v1/binding">
+  <wsdl:import namespace="http://nav.no/samordning/tjenester/opprettsamordning/v1" location="Oprettsamordning.wsdl">
+    </wsdl:import>
+  <wsdl:binding name="opprettsamordning_v1Binding" type="port:Opprettsamordning_v1">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="lagreTPYtelse">
+      <soap:operation soapAction="http://nav.no/samordning/tjenester/opprettsamordning/v1/Opprettsamordning_v1/lagreTPYtelseRequest"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+        <wsdl:fault name="faultTPYtelseAlleredeRegistrert">
+           <soap:fault name="faultTPYtelseAlleredeRegistrert" use="literal"/>
+         </wsdl:fault>
+        <wsdl:fault name="faultSikkerhet">
+            <soap:fault name="faultSikkerhet" use="literal"/>
+        </wsdl:fault>
+         <wsdl:fault name="faultGenerisk">
+           <soap:fault name="faultGenerisk" use="literal"/>
+         </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+        <soap:operation soapAction="http://nav.no/samordning/tjenester/opprettsamordning/v1/Opprettsamordning_v1/pingRequest"/>
+        <wsdl:input>
+          <soap:body parts="parameters" use="literal"/>
+        </wsdl:input>
+        <wsdl:output>
+          <soap:body parts="parameters" use="literal"/>
+        </wsdl:output>
+      </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Opprettsamordning_v1">
+      <wsdl:port name="Opprettsamordning_v1Port" binding="tns:opprettsamordning_v1Binding">
+        <soap:address location="http://localhost:9080/opprettsamordning"/>
+      </wsdl:port>
+    </wsdl:service>
+  </wsdl:definitions>
