@@ -7,7 +7,7 @@
 
     <groupId>no.nav.samordning.wsdl</groupId>
     <artifactId>opprett-samordning-wsdl</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <build>
         <plugins>
