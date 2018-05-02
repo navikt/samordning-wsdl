@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        targetNamespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1/informasjon"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+    <xsd:include schemaLocation="Vedtak.xsd"></xsd:include>
+    <xsd:include schemaLocation="ArbeidOgAktivitetsvedtak.xsd"></xsd:include>
+    <xsd:include schemaLocation="Person.xsd"></xsd:include>
+    <xsd:include schemaLocation="TPYtelse.xsd"></xsd:include>
+</xsd:schema>

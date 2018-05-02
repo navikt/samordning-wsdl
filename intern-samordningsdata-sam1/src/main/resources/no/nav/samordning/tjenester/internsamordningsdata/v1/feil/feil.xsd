@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+        targetNamespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1/feil"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+>
+    <xsd:include schemaLocation="FaultGenerisk.xsd"></xsd:include>
+    <xsd:include schemaLocation="FaultTPForholdIkkeIverksatt.xsd"></xsd:include>
+    <xsd:include schemaLocation="FaultSikkerhet.xsd" />
+</xsd:schema>

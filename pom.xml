@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>intern-samordningsdata-sam1</module>
         <module>samordningsdata</module>
         <module>opprett-samordning</module>
         <module>tpforhold-vedlikehold</module>

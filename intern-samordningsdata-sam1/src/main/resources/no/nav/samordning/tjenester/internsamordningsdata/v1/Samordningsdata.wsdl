@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Samordningsdata"
+                  targetNamespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1"
+                  xmlns:tns="http://nav.no/samordning/tjenester/internsamordningsdata/v1"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:meldinger="http://nav.no/samordning/tjenester/internsamordningsdata/v1/meldinger"
+                  xmlns:feil="http://nav.no/samordning/tjenester/internsamordningsdata/v1/feil"
+>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1"
+    >
+      <xsd:import namespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1/meldinger" schemaLocation="meldinger/meldinger.xsd"/>
+      <xsd:import namespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1/feil" schemaLocation="feil/feil.xsd"/>
+
+      <xsd:element name="hentSamordningsdata">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSamordningsdataReq" type="meldinger:HentSamordningsdataReq"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="hentSamordningsdataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="hentSamordningsdataResp" type="meldinger:HentSamordningsdataResp"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+
+      <xsd:element name="hentSamordningsdata_faultTPForholdIkkeIverksatt" type="feil:FaultTPForholdIkkeIverksatt"/>
+      <xsd:element name="hentSamordningsdata_faultSikkerhet" type="feil:FaultSikkerhet"/>
+      <xsd:element name="hentSamordningsdata_faultGenerisk" type="feil:FaultGenerisk"/>
+      <xsd:element name="ping">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="pingResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  
+  <wsdl:message name="hentSamordningsdataRequestMsg">
+    <wsdl:part element="tns:hentSamordningsdata" name="hentSamordningsdataParameters"/>
+  </wsdl:message>
+  <wsdl:message name="hentSamordningsdataResponseMsg">
+    <wsdl:part element="tns:hentSamordningsdataResponse" name="hentSamordningsdataResult"/>
+  </wsdl:message>
+  <wsdl:message name="hentSamordningsdata_faultGeneriskMsg">
+    <wsdl:part element="tns:hentSamordningsdata_faultGenerisk" name="faultGenerisk"/>
+  </wsdl:message>
+  <wsdl:message name="hentSamordningsdata_faultTPForholdIkkeIverksattMsg">
+    <wsdl:part element="tns:hentSamordningsdata_faultTPForholdIkkeIverksatt" name="faultTPForholdIkkeIverksatt"/>
+  </wsdl:message>
+  <wsdl:message name="hentSamordningsdata_faultSikkerhetMsg">
+    <wsdl:part element="tns:hentSamordningsdata_faultSikkerhet" name="faultSikkerhet"/>
+  </wsdl:message>
+  <wsdl:message name="pingResponse">
+    <wsdl:part name="parameters" element="tns:pingResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingRequest">
+    <wsdl:part name="parameters" element="tns:ping">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="Samordningsdata_v1">
+    
+    <wsdl:operation name="hentSamordningsdata">
+      <wsdl:input message="tns:hentSamordningsdataRequestMsg" name="hentSamordningsdataRequest"/>
+      <wsdl:output message="tns:hentSamordningsdataResponseMsg" name="hentSamordningsdataResponse"/>
+      <wsdl:fault message="tns:hentSamordningsdata_faultGeneriskMsg" name="faultGenerisk"/>
+      <wsdl:fault message="tns:hentSamordningsdata_faultTPForholdIkkeIverksattMsg" name="faultTPForholdIkkeIverksatt"/>
+      <wsdl:fault message="tns:hentSamordningsdata_faultSikkerhetMsg" name="faultSikkerhet"/>
+
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:input message="tns:pingRequest">
+      </wsdl:input>
+      <wsdl:output message="tns:pingResponse">
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

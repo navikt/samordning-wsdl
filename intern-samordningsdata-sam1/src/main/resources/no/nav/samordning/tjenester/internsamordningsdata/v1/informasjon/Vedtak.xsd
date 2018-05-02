@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1/informasjon"
+	xmlns:v1="http://nav.no/samordning/tjenester/internsamordningsdata/v1/informasjon"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:include schemaLocation="BeregningUforetrygd.xsd"></xsd:include>
+	<xsd:include schemaLocation="Vilkarsvedtak.xsd"></xsd:include>
+	<xsd:include schemaLocation="Beregning2011.xsd"></xsd:include>
+	<xsd:include schemaLocation="Beregning.xsd"></xsd:include>
+
+	<xsd:complexType name="Vedtak">
+		<xsd:sequence>
+			<xsd:element minOccurs="1" name="vedtakId"
+				type="xsd:string" />
+			<xsd:element minOccurs="1" name="virkningFom"
+				type="xsd:date" />
+			<xsd:element minOccurs="0" name="virkningTom"
+				type="xsd:date" />
+			<xsd:element minOccurs="0" name="saksKode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="AFP" />
+						<xsd:enumeration value="ALDER" />
+						<xsd:enumeration value="BARNEP" />
+						<xsd:enumeration value="GJENLEV" />
+						<xsd:enumeration value="KRIGSP" />
+						<xsd:enumeration value="UFOREP" />
+						<xsd:enumeration value="GAM_YRK" />
+						<xsd:enumeration value="AFP_PRIVAT" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="barnListe" type="v1:Vilkarsvedtak">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="typeKrigspensjon">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="MIL_INV" />
+						<xsd:enumeration value="MIL_GJENLEV" />
+						<xsd:enumeration value="MIL_BARNEP" />
+						<xsd:enumeration value="SIVIL_INV" />
+						<xsd:enumeration value="SIVIL_GJENLEV" />
+						<xsd:enumeration value="SIVIL_BARNEP" />
+						<xsd:enumeration value="UP" />
+						<xsd:enumeration value="EP" />
+						<xsd:enumeration value="BP" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="beregningListe" type="v1:Beregning" />
+			<xsd:element minOccurs="0" name="vedtaksKode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+
+						<xsd:enumeration value="FORGANG"></xsd:enumeration>
+						<xsd:enumeration value="ENDRING"></xsd:enumeration>
+						<xsd:enumeration value="OPPHOR"></xsd:enumeration>
+						<xsd:enumeration value="SAMMENSTOT"></xsd:enumeration>
+						<xsd:enumeration value="TILBAKEKR"></xsd:enumeration>
+						<xsd:enumeration value="OPPTJ"></xsd:enumeration>
+						<xsd:enumeration value="GOMR"></xsd:enumeration>
+						<xsd:enumeration value="REGULERING"></xsd:enumeration>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="beregning2011Liste" type="v1:Beregning2011">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="regelverkKode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+
+						<xsd:enumeration value="G_REG" />
+						<xsd:enumeration value="N_REG_G_OPPTJ" />
+						<xsd:enumeration value="N_REG_G_N_OPPTJ" />
+						<xsd:enumeration value="N_REG_N_OPPTJ" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="beregningUforetrygdListe"
+				type="v1:BeregningUforetrygd" maxOccurs="unbounded">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

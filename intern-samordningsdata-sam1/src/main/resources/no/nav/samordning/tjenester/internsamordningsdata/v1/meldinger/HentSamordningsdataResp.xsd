@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+	targetNamespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1/meldinger"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:informasjon="http://nav.no/samordning/tjenester/internsamordningsdata/v1/informasjon"
+>
+	<xsd:import namespace="http://nav.no/samordning/tjenester/internsamordningsdata/v1/informasjon" schemaLocation="../informasjon/informasjon.xsd" />
+	<xsd:complexType name="HentSamordningsdataResp">
+		<xsd:sequence>
+			<xsd:element minOccurs="1" name="tpnr">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:length value="4" />
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="1" name="person" type="informasjon:Person" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="pensjonVedtakListe" type="informasjon:Vedtak" />
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="arbeidVedtakListe" type="informasjon:ArbeidOgAktivitetsvedtak">
+			</xsd:element>
+			<xsd:element maxOccurs="unbounded" minOccurs="0"
+				name="tjenestepensjonYtelseListe" type="informasjon:TPYtelse" />
+			<xsd:element minOccurs="1" name="ufullstendigeData"
+				type="xsd:boolean" />
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
