@@ -14,7 +14,7 @@
             <plugin>
                 <groupId>org.apache.cxf</groupId>
                 <artifactId>cxf-codegen-plugin</artifactId>
-                <version>3.2.1</version>
+                <version>3.3.5</version>
                 <executions>
                     <execution>
                         <id>generate-sources</id>
@@ -36,7 +36,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.0.1</version>
+                <version>3.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -49,6 +49,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.2.0</version>
                 <executions>
                     <execution>
                         <id>create-distribution</id>
@@ -70,15 +71,10 @@
 
     <distributionManagement>
         <repository>
-            <id>iapp-releases</id>
-            <name>NAV Nexus3 Internal Repository</name>
-            <url>https://repo.adeo.no/repository/maven-releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>iapp-snapshots</id>
-            <name>NAV Nexus3 Snapshot Repository</name>
-            <url>https://repo.adeo.no/repository/maven-snapshots</url>
+            <id>github</id>
+            <name>Github navikt Apache Maven Packages</name>
+            <url>https://maven.pkg.github-com/navikt/samordning-wsdl</url>
             <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
+        </repository>
     </distributionManagement>
 </project>
