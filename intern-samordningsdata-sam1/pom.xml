@@ -37,7 +37,7 @@
         <repository>
             <id>github</id>
             <name>Github navikt Apache Maven Packages</name>
-            <url>https://maven.pkg.github-com/navikt/samordning-wsdl</url>
+            <url>https://maven.pkg.github.com/navikt/samordning-wsdl</url>
             <uniqueVersion>false</uniqueVersion>
         </repository>
     </distributionManagement>
