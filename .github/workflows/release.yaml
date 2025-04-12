@@ -28,11 +28,6 @@ jobs:
       - name: Build
         run: mvn clean -B verify
 
-      - name: Set version
-        run: |
-          echo "$(git rev-parse --short HEAD)" > .version
-          mvn versions:set -DnewVersion="$(cat .version)" -DprocessAllModules
-
       - name: Release
         run: mvn deploy -X -DskipTests=true
         env:

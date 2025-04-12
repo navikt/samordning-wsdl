@@ -8,7 +8,7 @@
     <parent>
         <groupId>no.nav.samordning.wsdl</groupId>
         <artifactId>samordning-wsdl</artifactId>
-        <version>1</version>
+        <version>${revision}</version>
     </parent>
 
     <artifactId>varsle-vedtak-aap-wsdl</artifactId>
