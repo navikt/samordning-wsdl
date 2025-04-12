@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="TPSamordningVarsling" targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V1_0"
+                  xmlns:bons0="http://nav-lib-elsam-tptilb/no/nav/tpsamordningvarsling/V1_0/inf/TPSamordningVarsling"
+                  xmlns:bons1="http://nav.no/elsam/tpsamordningvarsling/V0_5"
+                  xmlns:tns="http://nav.no/elsam/tpsamordningvarsling/V1_0"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V1_0"
+                    xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V1_0">
+            <xsd:import namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5"
+                        schemaLocation="no/nav/tpsamordningvarsling/V0_5/asbo/VarsleManglendeRefusjonskravReq.xsd"/>
+            <xsd:import namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5"
+                        schemaLocation="no/nav/tpsamordningvarsling/V0_5/asbo/VarsleEndringPersonaliaReq.xsd"/>
+            <xsd:import namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5"
+                        schemaLocation="no/nav/tpsamordningvarsling/V0_5/asbo/VarsleEndringTPYtelseReq.xsd"/>
+            <xsd:import namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5"
+                        schemaLocation="no/nav/tpsamordningvarsling/V0_5/fault/FaultGenerisk.xsd"/>
+            <xsd:include schemaLocation="no/nav/tpsamordningvarsling/av1_0/asbo/VarsleVedtakNAVReq.xsd"/>
+            <xsd:element name="varsleVedtakNAV">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleVedtakNAVReq" nillable="true" type="bons0:VarsleVedtakNAVReq"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakNAVResponse">
+                <xsd:complexType>
+                    <xsd:sequence/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleVedtakNAVFault1_faultGenerisk" nillable="true" type="bons1:FaultGenerisk"/>
+            <xsd:element name="varsleEndringTPYtelse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleEndringTPYtelseReq" nillable="true"
+                                     type="bons1:VarsleEndringTPYtelseReq"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleEndringTPYtelseResponse">
+                <xsd:complexType>
+                    <xsd:sequence/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleEndringTPYtelseFault1_faultGenerisk" nillable="true" type="bons1:FaultGenerisk"/>
+            <xsd:element name="varsleManglendeRefusjonskrav">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleManglendeRefusjonskravReq" nillable="true"
+                                     type="bons1:VarsleManglendeRefusjonskravReq"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleManglendeRefusjonskravResponse">
+                <xsd:complexType>
+                    <xsd:sequence/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleEndringPersonalia">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="varsleEndringPersonaliaReq" nillable="true"
+                                     type="bons1:VarsleEndringPersonaliaReq"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleEndringPersonaliaResponse">
+                <xsd:complexType>
+                    <xsd:sequence/>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="varsleManglendeRefusjonskravFault1_faultGenerisk" nillable="true"
+                         type="bons1:FaultGenerisk"/>
+            <xsd:element name="operation1Fault1_faultGenerisk" nillable="true" type="bons1:FaultGenerisk"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="varsleVedtakNAVRequestMsg">
+        <wsdl:part element="tns:varsleVedtakNAV" name="varsleVedtakNAVParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakNAVResponseMsg">
+        <wsdl:part element="tns:varsleVedtakNAVResponse" name="varsleVedtakNAVResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleVedtakNAV_faultGeneriskMsg">
+        <wsdl:part element="tns:varsleVedtakNAVFault1_faultGenerisk" name="faultGenerisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringTPYtelseRequestMsg">
+        <wsdl:part element="tns:varsleEndringTPYtelse" name="varsleEndringTPYtelseParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringTPYtelseResponseMsg">
+        <wsdl:part element="tns:varsleEndringTPYtelseResponse" name="varsleEndringTPYtelseResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringTPYtelse_faultGeneriskMsg">
+        <wsdl:part element="tns:varsleEndringTPYtelseFault1_faultGenerisk" name="faultGenerisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskravRequestMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskrav" name="varsleManglendeRefusjonskravParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskravResponseMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskravResponse" name="varsleManglendeRefusjonskravResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringPersonaliaRequestMsg">
+        <wsdl:part element="tns:varsleEndringPersonalia" name="varsleEndringPersonaliaParameters"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringPersonaliaResponseMsg">
+        <wsdl:part element="tns:varsleEndringPersonaliaResponse" name="varsleEndringPersonaliaResult"/>
+    </wsdl:message>
+    <wsdl:message name="varsleManglendeRefusjonskrav_faultGeneriskMsg">
+        <wsdl:part element="tns:varsleManglendeRefusjonskravFault1_faultGenerisk" name="faultGenerisk"/>
+    </wsdl:message>
+    <wsdl:message name="varsleEndringPersonalia_faultGeneriskMsg">
+        <wsdl:part element="tns:operation1Fault1_faultGenerisk" name="faultGenerisk"/>
+    </wsdl:message>
+    <wsdl:portType name="TPSamordningVarsling">
+        <wsdl:operation name="varsleVedtakNAV">
+            <wsdl:input message="tns:varsleVedtakNAVRequestMsg" name="varsleVedtakNAVRequest"/>
+            <wsdl:output message="tns:varsleVedtakNAVResponseMsg" name="varsleVedtakNAVResponse"/>
+            <wsdl:fault message="tns:varsleVedtakNAV_faultGeneriskMsg" name="faultGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="varsleEndringTPYtelse">
+            <wsdl:input message="tns:varsleEndringTPYtelseRequestMsg" name="varsleEndringTPYtelseRequest"/>
+            <wsdl:output message="tns:varsleEndringTPYtelseResponseMsg" name="varsleEndringTPYtelseResponse"/>
+            <wsdl:fault message="tns:varsleEndringTPYtelse_faultGeneriskMsg" name="faultGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="varsleManglendeRefusjonskrav">
+            <wsdl:input message="tns:varsleManglendeRefusjonskravRequestMsg"
+                        name="varsleManglendeRefusjonskravRequest"/>
+            <wsdl:output message="tns:varsleManglendeRefusjonskravResponseMsg"
+                         name="varsleManglendeRefusjonskravResponse"/>
+            <wsdl:fault message="tns:varsleManglendeRefusjonskrav_faultGeneriskMsg" name="faultGenerisk"/>
+        </wsdl:operation>
+        <wsdl:operation name="varsleEndringPersonalia">
+            <wsdl:input message="tns:varsleEndringPersonaliaRequestMsg" name="varsleEndringPersonaliaRequest"/>
+            <wsdl:output message="tns:varsleEndringPersonaliaResponseMsg" name="varsleEndringPersonaliaResponse"/>
+            <wsdl:fault message="tns:varsleEndringPersonalia_faultGeneriskMsg" name="faultGenerisk"/>
+        </wsdl:operation>
+    </wsdl:portType>
+</wsdl:definitions>

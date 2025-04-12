@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_8" xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V0_8" xmlns:tns="http://nav.no/elsam/tpsamordningvarsling/V0_5" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:include schemaLocation="Vedtak.xsd"/>
+    <xsd:import namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5" schemaLocation="../../V0_5/asbo/ArbeidOgAktivitetsvedtak.xsd"/>
+	<xsd:complexType name="VarsleVedtakNAVReq">
+		<xsd:sequence>
+			<xsd:element minOccurs="1" name="tpnr">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:length value="4"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="1" name="fnr">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:length value="11"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="samordningsmeldingId">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:maxLength value="10"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="pensjonVedtak" type="bons0:Vedtak"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="arbeidOgAktivitetsvedtak" type="tns:ArbeidOgAktivitetsvedtak">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

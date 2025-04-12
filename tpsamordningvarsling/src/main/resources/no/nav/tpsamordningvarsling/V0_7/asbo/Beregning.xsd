@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema targetNamespace="http://nav.no/elsam/tpsamordningvarsling/V0_7" xmlns:bons0="http://nav.no/elsam/tpsamordningvarsling/V0_5" xmlns:bons1="http://nav.no/elsam/tpsamordningvarsling/V0_7" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:include schemaLocation="BeregningUtvidelse1.xsd"/>
+	<xsd:import namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5" schemaLocation="../../V0_5/asbo/BeregningNokkelinfo.xsd">
+	</xsd:import>
+	<xsd:import namespace="http://nav.no/elsam/tpsamordningvarsling/V0_5" schemaLocation="../../V0_5/asbo/KrigOgGammelYrkesskade.xsd">
+	</xsd:import>
+
+	<xsd:complexType name="Beregning">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="virkningFom" type="xsd:date"/>
+			<xsd:element minOccurs="0" name="virkningTom" type="xsd:date"/>
+			<xsd:element minOccurs="0" name="brutto" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="netto" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="resultatKode">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string"/>
+				</xsd:simpleType>
+			</xsd:element>
+			<xsd:element minOccurs="0" name="p67Berergning" nillable="true" type="xsd:boolean"/>
+			<xsd:element minOccurs="0" name="afpPensjonsgrad" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="bruttoGrunnpensjon" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="nettoGrunnpensjon" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="grunnpensjonsats" nillable="true" type="xsd:double"/>
+			<xsd:element minOccurs="0" name="bruttoTilleggspensjon" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="nettoTilleggspensjon" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="bruttoSertillegg" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="nettoSertillegg" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="sertilleggSats" nillable="true" type="xsd:double"/>
+			<xsd:element minOccurs="0" name="bruttoAFPtillegg" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="nettoAFPtillegg" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="ektefelletillegg" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="bruttoBarnetilleggFellesbarn" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="nettoBarnetilleggFellesbarn" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="antallBarnetilleggFellesbarn" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="bruttoBarnetilleggSerkullsbarn" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="nettoBarnetilleggSerkullsbarn" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="antallBarnetilleggSerkullsbarn" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="nettoVentetillegg" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="ventetilleggProsent" nillable="true" type="xsd:double"/>
+			<xsd:element minOccurs="0" name="paragraf851Tillegg" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="krigOgGammelYrkesskade" type="bons0:KrigOgGammelYrkesskade"/>
+			<xsd:element minOccurs="0" name="yrkesskadegrad" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="uforegrad" nillable="true" type="xsd:int"/>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="involvertePersonerNokkelinfoListe" type="bons0:BeregningNokkelinfo"/>
+			<xsd:element minOccurs="0" name="fremtidigPensjonsgivendeInntektBruker" nillable="true" type="xsd:int"/>
+			<xsd:element minOccurs="0" name="minstenivatilleggPensjonistpar" type="xsd:int">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="minstenivatilleggIndividuelt" type="xsd:int">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="utvidelse" type="bons1:BeregningUtvidelse1">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
