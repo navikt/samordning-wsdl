@@ -24,7 +24,7 @@
         <module>varsle-vedtak-samordning</module>
         <module>varsle-vedtak-nav</module>
         <module>varsle-vedtak-aap</module>
-        <module>nav-arbeidOgAktivitetVedtak-v1-tjenestespesifikasjon</module>
+        <module>nav-arbeidogaktivitetvedtak-v1-tjenestespesifikasjon</module>
         <module>tpsamordningvarsling</module>
     </modules>
 

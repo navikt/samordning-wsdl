@@ -11,7 +11,7 @@
         <version>${revision}</version>
     </parent>
 
-    <artifactId>nav-arbeidOgAktivitetVedtak-v1-tjenestespesifikasjon</artifactId>
+    <artifactId>nav-arbeidogaktivitetvedtak-v1-tjenestespesifikasjon</artifactId>
 
     <build>
         <plugins>
