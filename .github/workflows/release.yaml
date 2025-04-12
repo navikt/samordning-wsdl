@@ -32,7 +32,7 @@ jobs:
         run: mvn clean -B verify
 
       - name: Release
-        run: mvn -B -Drevision="${REVISION}" -DskipTests=true source:jar deploy
+        run: mvn -B -Drevision="${REVISION}" -DskipTests=true deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REVISION: ${{ steps.revision.outputs.revision }}

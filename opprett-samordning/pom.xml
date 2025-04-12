@@ -58,7 +58,7 @@
                 <executions>
                     <execution>
                         <id>create-distribution</id>
-                        <phase>package</phase>
+                        <phase>deploy</phase>
                         <goals>
                             <goal>single</goal>
                         </goals>
