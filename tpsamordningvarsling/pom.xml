@@ -27,7 +27,7 @@
                             <sourceRoot>${project.build.directory}/generated-sources/cxf</sourceRoot>
                             <wsdlOptions>
                                 <wsdlOption>
-                                    <wsdl>${basedir}/src/main/resources/Binding.wsdl</wsdl>
+                                    <wsdl>${basedir}/src/main/resources/TPSamordningVarslingBinding.wsdl</wsdl>
                                 </wsdlOption>
                             </wsdlOptions>
                         </configuration>
