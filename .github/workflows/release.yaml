@@ -29,7 +29,7 @@ jobs:
           echo "revision=$TIME-$COMMIT" >> $GITHUB_OUTPUT
 
       - name: Build
-        run: mvn clean -B verify
+        run: mvn clean -B -Drevision="${REVISION}" verify
         env:
           REVISION: ${{ steps.revision.outputs.revision }}
 
