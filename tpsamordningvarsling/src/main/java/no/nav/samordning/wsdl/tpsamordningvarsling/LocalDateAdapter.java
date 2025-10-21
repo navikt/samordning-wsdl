@@ -2,7 +2,7 @@ package no.nav.samordning.wsdl.tpsamordningvarsling;
 
 import java.time.LocalDate;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 public class LocalDateAdapter extends XmlAdapter<String, LocalDate>{
 	@Override
