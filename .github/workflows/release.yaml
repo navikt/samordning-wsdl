@@ -30,6 +30,8 @@ jobs:
 
       - name: Build
         run: mvn clean -B verify
+        env:
+          REVISION: ${{ steps.revision.outputs.revision }}
 
       - name: Release
         run: mvn -B -Drevision="${REVISION}" -DskipTests=true deploy
